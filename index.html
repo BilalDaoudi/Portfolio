@@ -1,284 +1,79 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
+<html lang="ar">
 <head>
-    <meta charset="utf-8">
-    <title>Bilal DAOUDI</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance du site</title>
     <link rel="icon" href="img/icon.ico" type="image/ico">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .maintenance-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .maintenance-icon {
+            font-size: 80px;
+            color: #e74c3c;
+        }
+
+        .maintenance-message {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .contact-options {
+            margin-top: 30px;
+        }
+
+        .social-icons {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icon {
+            font-size: 24px;
+            color: #3498db;
+        }
+    </style>
 </head>
 <body>
-    <div class="preloader">
-        <div class="box">
-            <div></div>
-            <div></div>
-            <div></div>
+
+    <div class="maintenance-container">
+        <div class="maintenance-icon">&#9888;</div>
+        <div class="maintenance-message">
+            <p>Je suis en train de résoudre un problème sur le site et je serai de retour bientôt</p>
+            <p>Ou visitez nos réseaux sociaux</p>
+            <p><i class="fas fa-phone"></i> +2127 079 008 67</p>
         </div>
-    </div>
-    <div class="header">
-        <div class="container">
-            <div class="row justify-contant-between">
-                <div class="logo">
-                    <a href="index.html">BD</a>
-                </div>
-                <div class="hamburger-btn outer-shadow hover-in-shadow ">
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav class="nav-menu">
-        <div class="close-nav-menu outer-shadow hover-in-shadow ">&times;</div>
-        <div class="nav-menu-inner">
-            <ul>
-                <li><a href="#home" class="link-item inner-shadow active">Home</a></li>
-                <li><a href="#about" class="link-item outer-shadow hover-in-shadow">About</a></li>
-                <li><a href="#project" class="link-item outer-shadow hover-in-shadow">projects</a></li>
-                <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">contact</a></li>
-            </ul>
-        </div>
-        <p class="copyright-text">&copy; 2023 Bilal DAOUDI</p>
-    </nav>
-    <div class="fade-out-effect"></div>
-    <section class="home-section section active" id="home">
-        <div class="effect-wrap">
-            <div class="effect effect-1">
-            </div>
-            <div class="effect effect-2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect effect-3">
-            </div>
-            <div class="effect effect-4">
-            </div>
-            <div class="effect effect-5">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row full-screen align-items-center ">
-                <div class="home-img">
-                    <div class="img-box inner-shadow">
-                        <img src="img/daoudi.jpg" class="outer-shadow" alt="">
-                        
-                    </div>
-                </div>
-                <div class="home-text">
-                    <p>Welcome to My Portfolio</p>
-                    <h2>I'm Bilal DAOUDI</h2>
-                    <h1>Full Stack Web Developer</h1>
-                    
-                    <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
-                </div>
+
+        <div class="contact-options">
+            <ul class="social-icons">
+               <li><a href="https://web.facebook.com/profile.php?id=100008463370690" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/bilaldaoudi" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/bilaldaoudi591" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="mailto:bilaldaoudi591@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a></li>
                 
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2 data-heading="main info">About Me</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="about-img">
-                    <div class="img-box inner-shadow"><img src="img/bilal.jpg" alt="" class="outer-shadow">
-                    </div>
-                    <div class="social-link">
-                        <a href="https://web.facebook.com/profile.php?id=100008463370690" target="_blank" class=" outer-shadow hover-in-shadow"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/bilal-daoudi-953681236/" target="_blank" class=" outer-shadow hover-in-shadow"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/bilal_daoudi591/" target="_blank" class=" outer-shadow hover-in-shadow"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/BilalDaoudi" target="_blank" class=" outer-shadow hover-in-shadow"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="about-info">
-                    <p><span>Hi! I'm Bilal DAOUDI,</span> a passionate full-stack web developer focused on efficient, user-friendly applications. My journey began with a fascination for turning ideas into interactive digital experiences. Specializing in front-end and back-end development, I craft engaging interfaces and robust logic to meet user needs and business goals. I love exploring new technologies, experimenting with design, and collaborating on projects. Check out my portfolio for a glimpse of my work. Let's connect!</p>
-                    <a target="_blank" href="img/cv/CVenAnglais.pdf" class="btn-1 outer-shadow hover-in-shadow">CV English</a>
-                    <a target="_blank" href="img/cv/CVenFrancais.pdf" class="btn-1 outer-shadow hover-in-shadow">CV Frensh</a>
-                    <a href="#project" class="link-item btn-1 outer-shadow hover-in-shadow">Projects</a>
-                    <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="about-tabs">
-                    <span class="tab-items outer-shadow active" data-target=".skills">Skills</span>
-                    <span class="tab-items outer-shadow " data-target=".education">Education</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="skills tab-content active">
-                    <div class="row" id="skills">
-                    </div>
-                </div>
-            </div>
-            <div class="rwo">
-                <div class="education tab-content">
-                    <div class="row">
-                        <div class="timeline">
-                            <div class="row" id="educations">
-                                    <!-- Remplire par education.js -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio-section section" id="project">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2 data-heading="Projects">Letest works</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="portfolio-filter ">
-                    <span class="filter-item outer-shadow active" data-target="all">all</span>
-                </div>
-            </div>
-            <div class="row portfolio-items" id="projects">
-                 <!-- Remplire par projects.js -->
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section section" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2 data-heading="contact">Get in Touch</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="contact-item">
-                    <div class="contact-item-inner outer-shadow">
-                        <i class="fas fa-phone"></i>
-                        <span>Phone</span>
-                        <p>+2127 079 008 67</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-inner outer-shadow">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                        <p>bilaldaoudi591@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-inner outer-shadow">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Address</span>
-                        <p>Jaadar Zegangan Nador</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="contact-form">
-                    <form action="">
-                        <div class="row">
-                            <div class="w-50">
-                                <div class="input-group outer-shadow hover-in-shadow"><input type="text"
-                                        placeholder="Name" class="input-control"></div>
-                                <div class="input-group outer-shadow hover-in-shadow"><input type="email"
-                                        placeholder="Email" class="input-control"></div>
-                                <div class="input-group outer-shadow hover-in-shadow"><input type="subject"
-                                        placeholder="Subject" class="input-control"></div>
-                            </div>
-                            <div class="w-50">
-                                <div class="input-group outer-shadow hover-in-shadow">
-                                    <textarea type="massage" placeholder="Massage" class="input-control"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="submit-btn">
-                                <button type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Massage</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- portfolio popup start -->
-    <div class="pp portfolio-popup">
-        <div class="pp-details">
-            <div class="pp-details-inner">
-                <div class="pp-title">
-                    <h2>personal portfolio</h2>
-                </div>
-                <div class="pp-project-details">
-                    <div class="row">
-                        <div class="description">
-                            <h3>Project Brief:</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab aspernatur voluptas
-                                et dolor iusto quasi aliquid incidunt magnam animi.</p>
-                        </div>
-                        <div class="info">
-                            <h3>Project info</h3>
-                            <ul>
-                                <li>Tools - <span>html,css ,js</span></li>
-                                <li>Live visit <span><a href="#" class=" outer-shadow hover-in-shadow">click me</a></span></li>
-                                <li>source Code <span><a href="#" class=" outer-shadow hover-in-shadow">click me</a></span></li>
-                                <li>source Code <span><a href="#" class=" outer-shadow hover-in-shadow">click me</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="separator"></div>
-        <div class="pp-main">
-            <div class="pp-main-inner">
-                <div class="pp-project-details-btn outer-shadow hover-in-shadow">Project details<i class="fas fa-plus"></i></div>
-                <div class="pp-close outer-shadow hover-in-shadow">&times;</div>
-                <img src="img/projects/large/project-1/1.png" class="pp-img outer-shadow" alt="">
-                <div class="pp-counter">1 of 6</div>
-            </div>
-            <div class="pp-loader">
-                <div></div>
-            </div>
-            <div class="pp-prev"><i class="fas fa-play"></i></div>
-            <div class="pp-next"><i class="fas fa-play"></i></div>
+           </ul>
         </div>
     </div>
-    <div class="style-switcher outer-shadow">
-        <div class="day-night s-icon outer-shadow hover-in-shadow">
-            <i class="fas fa-moon"></i>
-        </div>
-    </div>
-    <script src="js/projects.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/day-night.js"></script>
-    <script src="js/skills.js"></script>
-    <script src="js/education.js"></script>
+
 </body>
 </html>
