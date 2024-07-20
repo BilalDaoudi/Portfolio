@@ -1,13 +1,10 @@
 /*---------------------navigation menu--------------*/
 (() => {
-
     const hamburgerBtn = document.querySelector(".hamburger-btn"),
         navMenu = document.querySelector(".nav-menu"),
         closeNavBtn = document.querySelector(".close-nav-menu");
-
     hamburgerBtn.addEventListener("click", showNavMenu);
     closeNavBtn.addEventListener("click", hideNavMenu);
-
     function showNavMenu() {
         navMenu.classList.add("open");
         bodyScrollingToggle();
