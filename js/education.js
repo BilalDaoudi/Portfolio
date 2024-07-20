@@ -7,6 +7,7 @@ var educations = [
 function Educations(){
     let rowsducation = document.getElementById("educations");
     let html = "";
+    
     educations.map(e => html += 
         `<div class="timeline-item">
         <div class="timeline-item-inner outer-shadow">
