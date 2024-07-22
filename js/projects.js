@@ -64,6 +64,7 @@ var projects = [
     siteweb: "https://jeuxo.netlify.app",
     codesource: "https://github.com/BilalDaoudi/Tic-Tac-Toe",
   },
+  
   {
     titre: "Stopwatch: Measure Time with Precision",
     thumb: "img/images/Chronometre/thumb.jpg",
