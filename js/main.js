@@ -9,7 +9,6 @@
         navMenu.classList.add("open");
         bodyScrollingToggle();
     }
-
     function hideNavMenu() {
         navMenu.classList.remove("open");
         fadeOutEffect();
