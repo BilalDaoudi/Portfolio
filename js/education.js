@@ -17,6 +17,7 @@ function Educations(){
             <h4>${e.description} </h4>
         </div>
     </div>`);
+    
     rowsducation.innerHTML = html;
     
 }
