@@ -10,7 +10,6 @@ var projects = [
     siteweb: "",
     codesource: "",
   },
-  
   {
     titre: "Web Application for Car Repair Management",
     thumb: "img/images/GestionReparation/thumb.jpg",
@@ -64,7 +63,6 @@ var projects = [
     siteweb: "https://jeuxo.netlify.app",
     codesource: "https://github.com/BilalDaoudi/Tic-Tac-Toe",
   },
-  
   {
     titre: "Stopwatch: Measure Time with Precision",
     thumb: "img/images/Chronometre/thumb.jpg",
@@ -93,34 +91,33 @@ function Projects() {
   let html = "";
   projects.map((p) => {
     html += ` <div class="portfolio-item" data-category="">
-    <div class="portfolio-item-inner outer-shadow">
-        <div class="portfolio-item-img"><img src="${p.thumb}" alt="project" data-screenshots="${p.images}">
-            <span class="view-project">Image view</span>
-        </div>
-        <p class="portfolio-item-title">${p.titre}</p>
-        <div class="portfolio-item-details">
-            <div class="row">
-                <div class="description">
-                    <h3>Project Brief:</h3>
-                    <p>${p.description}</p>
-                </div>
-                <div class="info">
-                    <h3>Project info</h3>
-                    <ul>
-                        <li>Tools - <span>${p.Tools}</span></li>`;
-    if (p.siteweb != "")
-    html += `<li>Live view <span><a target="_blank" href=${p.siteweb}>click me</a></span></li>`;
-    if (p.codesource
-       != "")
-    html += `<li>source Code <span><a target="_blank"  href=${p.codesource}>click me</a></span></li>`;
-    html += `</ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>`;
+                  <div class="portfolio-item-inner outer-shadow">
+                      <div class="portfolio-item-img"><img src="${p.thumb}" alt="project" data-screenshots="${p.images}">
+                          <span class="view-project">Image view</span>
+                      </div>
+                      <p class="portfolio-item-title">${p.titre}</p>
+                      <div class="portfolio-item-details">
+                          <div class="row">
+                              <div class="description">
+                                  <h3>Project Brief:</h3>
+                                  <p>${p.description}</p>
+                              </div>
+                              <div class="info">
+                                  <h3>Project info</h3>
+                                  <ul>
+                                      <li>Tools - <span>${p.Tools}</span></li>`;
+                  if (p.siteweb != "")
+                  html += `<li>Live view <span><a target="_blank" href=${p.siteweb}>click me</a></span></li>`;
+                  if (p.codesource
+                     != "")
+                  html += `<li>source Code <span><a target="_blank"  href=${p.codesource}>click me</a></span></li>`;
+                  html += `</ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>`;
   });
   rowsprojects.innerHTML = html;
 }
-
 Projects();
