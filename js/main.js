@@ -5,10 +5,12 @@
         closeNavBtn = document.querySelector(".close-nav-menu");
     hamburgerBtn.addEventListener("click", showNavMenu);
     closeNavBtn.addEventListener("click", hideNavMenu);
+    
     function showNavMenu() {
         navMenu.classList.add("open");
         bodyScrollingToggle();
     }
+    
     function hideNavMenu() {
         navMenu.classList.remove("open");
         fadeOutEffect();
@@ -21,6 +23,7 @@
             document.querySelector(".fade-out-effect").classList.remove("active");
         }, 300)
     }
+    
     // attach an event handler to document
     document.addEventListener("click", (event) => {
         if (event.target.classList.contains("link-item")) {
@@ -61,8 +64,6 @@
                 }
                 // add hash (#) to url
                 window.location.hash = hash;
-
-
             }
         }
     })
