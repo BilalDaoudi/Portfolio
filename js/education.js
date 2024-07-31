@@ -3,6 +3,7 @@ var educations = [
     {date : "2020-2021" , titre : "General Economics" , description : "Student at the Multidisciplinary Faculty of Nador, majoring in General Economics." },
     {date : "2019-2020" , titre : "Baccalaureate" , description : "Baccalaureate in Life and Earth Sciences from Taha Hussein High School in Jaadar Zegangan, Nador." },
 ];
+
 function Educations(){
     let rowsducation = document.getElementById("educations");
     let html = "";
@@ -17,4 +18,5 @@ function Educations(){
     </div>`);
     rowsducation.innerHTML = html;
 }
+
 Educations();
