@@ -10,6 +10,7 @@ var projects = [
     siteweb: "",
     codesource: "",
   },
+  
   {
     titre: "Web Application for Car Repair Management",
     thumb: "img/images/GestionReparation/thumb.jpg",
@@ -21,6 +22,7 @@ var projects = [
     siteweb: "",
     codesource: "",
   },
+  
   {
     titre: "E-commerce Website (Laptop Sales)",
     thumb: "img/images/PCZone/thumb.jpg",
@@ -32,6 +34,7 @@ var projects = [
     siteweb: "https://pczone.netlify.app",
     codesource: "https://github.com/BilalDaoudi/PCZone",
   },
+      
   {
     titre: "Sudoku Challenge",
     thumb: "img/images/Sudoku/thumb.jpg",
