@@ -17,6 +17,8 @@ var skills = [
     {titre : "SonarQube" , percentage : "85%" },
 ];
 
+
+
 function Skills(){
     let rowskill = document.getElementById("skills");
     let html = "";
