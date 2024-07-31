@@ -5,7 +5,6 @@
         min-width: 50%;
     }
 }
-
 @media(max-width:767px) {
     .home-section .home-text,
     .home-section .home-img,
@@ -77,7 +76,6 @@
         right: auto;
     }
 }
-
 @media(max-width:576px) {
     .home-section .home-img .img-box {
         max-width: 260px;
