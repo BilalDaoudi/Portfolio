@@ -5,18 +5,15 @@
         closeNavBtn = document.querySelector(".close-nav-menu");
     hamburgerBtn.addEventListener("click", showNavMenu);
     closeNavBtn.addEventListener("click", hideNavMenu);
-    
     function showNavMenu() {
         navMenu.classList.add("open");
         bodyScrollingToggle();
     }
-    
     function hideNavMenu() {
         navMenu.classList.remove("open");
         fadeOutEffect();
         bodyScrollingToggle();
     }
-
     function fadeOutEffect() {
         document.querySelector(".fade-out-effect").classList.add("active");
         setTimeout(() => {
