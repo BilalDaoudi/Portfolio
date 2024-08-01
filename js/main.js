@@ -20,7 +20,6 @@
             document.querySelector(".fade-out-effect").classList.remove("active");
         }, 300)
     }
-    
     // attach an event handler to document
     document.addEventListener("click", (event) => {
         if (event.target.classList.contains("link-item")) {
@@ -64,12 +63,7 @@
             }
         }
     })
-
 })();
-
-
-
-
 
 /*--------------about section----------------*/
 (() => {
@@ -88,7 +82,6 @@
         }
     })
 })();
-
 function bodyScrollingToggle() {
     document.body.classList.toggle("stop-scrolling");
 }
@@ -107,8 +100,6 @@ function bodyScrollingToggle() {
         projectDetailsBtn = document.querySelector(".pp-project-details-btn");
 
     let itemIndex, slideIndex, screenshots;
-
-
     /* filter portfolio items*/
     filterContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("filter-item") && !event.target.classList.contains("active")) {
