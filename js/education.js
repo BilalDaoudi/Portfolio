@@ -4,8 +4,14 @@ var educations = [
     {date : "2019-2020" , titre : "Baccalaureate" , description : "Baccalaureate in Life and Earth Sciences from Taha Hussein High School in Jaadar Zegangan, Nador." },
 ];
 function Educations(){
+
+    
     let rowsducation = document.getElementById("educations");
+
+    
     let html = "";
+
+    
     educations.map(e => html += 
         `<div class="timeline-item">
         <div class="timeline-item-inner outer-shadow">
@@ -15,6 +21,8 @@ function Educations(){
             <h4>${e.description} </h4>
         </div>
     </div>`);
+
+    
     rowsducation.innerHTML = html;
 }
 Educations();
