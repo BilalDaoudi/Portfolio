@@ -18,6 +18,7 @@
     --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
     --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
+
 body.dark {
     --bg-black-900: #ffff;
     --bg-black-100: #353535;
@@ -31,12 +32,14 @@ body.dark {
     --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
     --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
 }
+
 body {
     font-size: 16px;
     line-height: 1.5;
     overflow-x: hidden !important;
     background-color: var(--bg-black-50);
 }
+
 body.stop-scrolling {
     overflow-y: hidden;
 }
@@ -45,12 +48,14 @@ body.stop-scrolling {
     font-weight: 400;
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
 }
+
 
 a {
     text-decoration: none;
@@ -60,6 +65,9 @@ a {
  ::after {
     box-sizing: border-box;
 }
+
+
+
 
 ul {
     list-style: none;
@@ -85,6 +93,9 @@ img {
 .justify-contant-between {
     justify-content: space-between;
 }
+
+
+
 
 .align-items-center {
     align-items: center;
