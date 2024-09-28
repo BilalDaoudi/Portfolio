@@ -1,6 +1,4 @@
 var projects = [
-
-  
   {
     titre: "School Management Web Application",
     thumb: "img/images/GestionEtablissement/thumb.jpg",
@@ -12,9 +10,6 @@ var projects = [
     siteweb: "",
     codesource: "",
   },
-
-
-  
   {
     titre: "Web Application for Car Repair Management",
     thumb: "img/images/GestionReparation/thumb.jpg",
@@ -25,14 +20,8 @@ var projects = [
     Tools: "HTML5, CSS3, Bootstrap5, JavaScript, Ajax, PHP, MySQL ",
     siteweb: "",
     codesource: "",
-
-    
   },
-
-  
   {
-
-    
     titre: "E-commerce Website (Laptop Sales)",
     thumb: "img/images/PCZone/thumb.jpg",
     images:
