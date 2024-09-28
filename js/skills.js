@@ -16,9 +16,6 @@ var skills = [
     {titre : "Docker" , percentage : "70%" },
     {titre : "SonarQube" , percentage : "85%" },
 ];
-
-
-
 function Skills(){
     let rowskill = document.getElementById("skills");
     let html = "";
@@ -33,5 +30,4 @@ function Skills(){
         </div>`);
     rowskill.innerHTML = html;
 }
-
 Skills();
