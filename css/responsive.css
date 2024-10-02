@@ -6,6 +6,8 @@
     }
 }
 
+
+
 @media(max-width:767px) {
     .home-section .home-text,
     .home-section .home-img,
@@ -39,11 +41,14 @@
         margin-bottom: 40px;
         max-width: 350px;
     }
+    
 
     
     .effect-3 {
         margin-left: -60px;
     }
+
+    
 
 
     
@@ -56,27 +61,40 @@
     .effect-5 {
         right: 5%;
     }
+
+    
     .about-section .about-img {
         padding-bottom: 30px;
     }
+
+    
     .about-section .timeline .timeline-item:nth-child(odd) {
         padding-right: 15px;
         padding-left: 75px;
         text-align: left;
     }
+    
     .about-section .timeline .timeline-item:nth-child(even) {
         padding-left: 75px;
     }
+
+    
     .about-section .timeline::before {
         left: 35px;
     }
+
+    
     .about-section .timeline .timeline-item:nth-child(odd) .icon {
         right: auto;
         left: -60px;
     }
+
+    
     .about-section .timeline .timeline-item:nth-child(even) .icon {
         left: -60px;
     }
+
+    
     .about-section .timeline .timeline-item {
         margin-bottom: 40px;
     }
