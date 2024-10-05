@@ -1,10 +1,20 @@
 import React from "react";
+
+
 import { useSelector } from "react-redux";
+
 import { Link } from "react-router-dom";
 
+
 const Project = ({ project }) => {
-  
+
+
+
+
+
   const langue = useSelector((data) => data.langue);
+
+  
   const {
     id,
     titre,
@@ -17,8 +27,13 @@ const Project = ({ project }) => {
     type,
   } = project;
 
+
+  
+
   return (
         <div className="portfolio-item" data-category="">
+
+          
           <div className="portfolio-item-inner outer-shadow">
             <div className="portfolio-item-img">
             <Link to={`/project/` + id}> <img src={thumb} alt="project" data-screenshots={images} /></Link>
