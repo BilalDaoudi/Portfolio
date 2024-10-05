@@ -1,17 +1,26 @@
 var informations = {
+  
   langue: "fr",
+  
   menu: {
     fr: ["Accueil", "À Propos", "Projets", "Contact"],
     en: ["Home", "About", "Projects", "Contact"],
     de: ["Startseite", "Über mich", "Projekte", "Kontakt"],
   },
+  
   home: {
+    
     fr: [
       "Bienvenue dans mon portfolio",
+      
       "Je suis Bilal DAOUDI.",
+      
       "Développeur Web Full Stack",
+      
       "Plus informations",
+      
     ],
+    
     en: [
       "Welcome to my portfolio",
       "I am  Bilal DAOUDI.",
