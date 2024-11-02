@@ -1,14 +1,7 @@
 import React from 'react';
 
-
-
 const Skill = (props) => {
-
-    
     const { titre, percentage } = props;
-
-
-    
     return (
         <div className="skill-items">
             <p>{titre}</p>
