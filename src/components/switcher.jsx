@@ -1,8 +1,5 @@
 import React, { useRef, useEffect } from "react";
-
 import Header from "./header";
-
-
 function Switcher() {
   
   const dayNightRef = useRef(null);
