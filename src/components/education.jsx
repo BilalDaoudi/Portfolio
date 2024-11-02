@@ -7,10 +7,7 @@ const Education = (props) => {
     const { date, titre, description } = props;
 
     return (
-        
         <div className="timeline-item">
-
-            
             <div className="timeline-item-inner outer-shadow">
                 <i className="fas fa-graduation-cap icon"></i>
                 <span>{date}</span>
@@ -18,7 +15,6 @@ const Education = (props) => {
                 <h4>{description}</h4>
             </div>
 
-            
         </div>
 
         
