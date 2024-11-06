@@ -1,11 +1,7 @@
 import React from 'react';
-
-
-
 const Education = (props) => {
-    
-    const { date, titre, description } = props;
 
+    const { date, titre, description } = props;
     return (
         <div className="timeline-item">
             <div className="timeline-item-inner outer-shadow">
