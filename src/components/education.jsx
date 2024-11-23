@@ -1,6 +1,5 @@
 import React from 'react';
 const Education = (props) => {
-
     const { date, titre, description } = props;
     return (
         <div className="timeline-item">
@@ -10,10 +9,7 @@ const Education = (props) => {
                 <h3>{titre}</h3>
                 <h4>{description}</h4>
             </div>
-
         </div>
-
-        
     );
 };
 
