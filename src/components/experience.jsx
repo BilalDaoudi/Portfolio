@@ -5,15 +5,11 @@ const Experience = (props) => {
         <div className="timeline-item">
             <div className="timeline-item-inner outer-shadow">
                 <i className="fas fa-briefcase icon"></i>
-                
                 <span>{date}</span>
                 <h3>{titre}</h3>
                 <h4>{description}</h4>
-                
             </div>
         </div>
-
-        
     );
 };
 
