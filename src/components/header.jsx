@@ -7,12 +7,7 @@ function Header() {
   const langue = useSelector((data) => data.langue);
   const dispatch = useDispatch();
   const handleChange = (event) => {
-
-
-
-    
     dispatch(changeLanguage(event.target.value));
-    
   };
 
   const toggleDarkMode = () => {
