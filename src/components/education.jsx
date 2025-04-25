@@ -1,4 +1,7 @@
 import React from 'react';
+
+
+
 const Education = (props) => {
     const { date, titre, description } = props;
     return (
