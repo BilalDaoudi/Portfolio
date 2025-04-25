@@ -8,19 +8,13 @@ var informations = {
     de: ["Startseite", "Über mich", "Projekte", "Kontakt"],
   },
   
-  home: {
-    
+  home: {    
     fr: [
       "Bienvenue dans mon portfolio",
-      
       "Je suis Bilal DAOUDI.",
-      
-      "Développeur Web Full Stack",
-      
-      "Plus informations",
-      
+      "Développeur Web Full Stack",      
+      "Plus informations",      
     ],
-    
     en: [
       "Welcome to my portfolio",
       "I am  Bilal DAOUDI.",
