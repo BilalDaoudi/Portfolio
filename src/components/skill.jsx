@@ -1,5 +1,9 @@
 import React from 'react';
 
+
+
+
+
 const Skill = (props) => {
     
     const { titre, percentage } = props;
