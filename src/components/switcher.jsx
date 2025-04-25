@@ -3,20 +3,10 @@ import Header from "./header";
 function Switcher() {
   const dayNightRef = useRef(null);
   const toggleDarkMode = () => {
-
     if (dayNightRef.current) {
-
-      
       dayNightRef.current.querySelector("i").classList.toggle("fa-sun");     
       dayNightRef.current.querySelector("i").classList.toggle("fa-moon");
-
-
-      
       document.body.classList.toggle("dark");
-
-
-
-      
     }
     
   };
