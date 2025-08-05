@@ -1,12 +1,14 @@
-# React Portfolio Project
+# Modern React Portfolio  
 
-A modern portfolio website built with React, Vite, and CSS. This project showcases my skills and projects with a clean, responsive design. Features include:
+A feature-rich portfolio built with **React 18**, **Vite**, and **Framer Motion** for smooth animations. Includes responsive design (Bootstrap 5), interactive carousels (Swiper, React Slick), and seamless routing (React Router 6). Optimized with ESLint and deployed via Vercel.  
 
-- Fast build times with Vite
-- Custom CSS styling
-- ESLint for code quality
-- Deployed on Vercel
+**Tech**: React, Vite, Framer Motion, Bootstrap, Swiper, React Router  
 
-The portfolio demonstrates my frontend development capabilities and serves as a professional showcase for my work. Includes essential configuration files for optimal performance and deployment.
+Key Features Highlighted:
+Performance: Vite for fast builds, React 18 for modern rendering.
 
-Built with: React, JavaScript, HTML5, CSS3
+UI/UX: Framer Motion animations, Bootstrap 5 responsiveness, Swiper carousels.
+
+Tooling: ESLint for code quality, Vite Preview for local testing.
+
+Deployment: Vercel-ready config.
