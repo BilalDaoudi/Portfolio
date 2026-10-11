@@ -232,19 +232,21 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     <!-- Profile Avatar Card -->
-                    <div class="md:col-span-5 flex justify-center">
-                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden glass p-3 border border-brand-500/30 glow-effect">
-                            <div class="w-full h-full bg-gradient-to-br from-brand-600/10 to-indigo-600/10 rounded-xl flex flex-col items-center justify-center p-6 text-center border border-adaptive">
-                                <!-- Conteneur agrandi (ex: w-36 h-36 ou w-40 h-40) -->
-                                <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center overflow-hidden mb-4 shadow-xl border-2 border-brand-500/30">
-                                    <img src="Design sans titre (1).png" alt="Bilal Daoudi" class="w-full h-full object-cover">
-                                </div>
-                                <h3 class="text-xl font-bold text-adaptive-main">Bilal Daoudi</h3>
-                                <p class="text-xs text-brand-500 font-semibold mt-1">Nador / Zegangane, Maroc 🇲🇦</p>
-                                <p class="text-xs text-adaptive-sub mt-3">Technicien Spécialisé Full-Stack</p>
-                            </div>
-                        </div>
-                    </div>
+<div class="md:col-span-5 flex justify-center w-full px-4">
+    <div class="relative w-full max-w-xs sm:w-80 rounded-2xl overflow-hidden glass p-3 border border-brand-500/30 glow-effect">
+        <div class="w-full h-full bg-gradient-to-br from-brand-600/10 to-indigo-600/10 rounded-xl flex flex-col items-center justify-center p-6 text-center border border-adaptive">
+            
+            <!-- Conteneur de l'avatar optimisé pour mobile -->
+            <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center overflow-hidden mb-4 shadow-xl border-2 border-brand-500/30">
+                <img src="Design sans titre (1).png" alt="Bilal Daoudi" class="w-full h-full object-cover object-top">
+            </div>
+            
+            <h3 class="text-xl font-bold text-adaptive-main">Bilal Daoudi</h3>
+            <p class="text-xs text-brand-500 font-semibold mt-1">Nador / Zegangane, Maroc 🇲🇦</p>
+            <p class="text-xs text-adaptive-sub mt-3">Technicien Spécialisé Full-Stack</p>
+        </div>
+    </div>
+</div>
 
                     <!-- Personal Details & Bio -->
                     <div class="md:col-span-7 space-y-6">
