@@ -1,81 +1,1159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Maintenance</title>
-    <link rel="icon" href="img/icon.ico" type="image/ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-
-        .maintenance-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .maintenance-icon {
-            font-size: 80px;
-            color: #e74c3c;
-        }
-
-        .maintenance-message {
-            font-size: 24px;
-            color: #333;
-            margin-top: 20px;
-        }
-
-        .contact-options {
-            margin-top: 30px;
-        }
-
-        .social-icons {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .social-icons li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .social-icon {
-            font-size: 24px;
-            color: #3498db;
-        }
-
-        @media screen and (max-width: 768px) {
-            .maintenance-message {
-                font-size: 15px;
+    <title>Bilal Daoudi — Full Stack Web Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        darkbg: '#0b0f17'
+                    }
+                }
             }
+        }
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS & Theme Rules -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Dark Theme Default */
+        .dark body {
+            background-color: #0b0f17;
+            color: #e5e7eb;
+        }
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .dark .text-adaptive-main { color: #ffffff; }
+        .dark .text-adaptive-sub { color: #9ca3af; }
+        .dark .border-adaptive { border-color: rgba(255, 255, 255, 0.1); }
+        .dark .bg-adaptive-card { background-color: #111827; }
+
+        /* Light Theme */
+        .light body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .light .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+        .light .text-adaptive-main { color: #0f172a; }
+        .light .text-adaptive-sub { color: #475569; }
+        .light .border-adaptive { border-color: rgba(0, 0, 0, 0.08); }
+        .light .bg-adaptive-card { background-color: #ffffff; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 30px -5px rgba(14, 165, 233, 0.25);
+        }
+
+        .toast-hidden {
+            transform: translateY(150%);
+            opacity: 0;
+        }
+        .toast-visible {
+            transform: translateY(0);
+            opacity: 1;
         }
     </style>
 </head>
-<body>
-    <div class="maintenance-container">
-        <div class="maintenance-icon">&#9888;</div>
-        <div class="maintenance-message">
-            <p>I'm currently fixing an issue on the site and will be back soon.</p>
-            <p>Meanwhile, feel free to visit our social media channels:</p>
-            <p><i class="fas fa-phone"></i> +2127 079 008 67</p>
+<body class="transition-colors duration-300 min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <!-- Header Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass transition-all duration-300 border-b border-adaptive">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="text-xl sm:text-2xl font-black tracking-tight flex items-center gap-2.5">
+                <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white text-xl font-extrabold shadow-lg shadow-brand-500/20">BD</span>
+                <span class="gradient-text">Bilal Daoudi</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#about" data-i18n="nav.about" class="text-adaptive-sub hover:text-brand-500 transition-colors">À Propos</a>
+                <a href="#skills" data-i18n="nav.skills" class="text-adaptive-sub hover:text-brand-500 transition-colors">Compétences</a>
+                <a href="#projects" data-i18n="nav.projects" class="text-adaptive-sub hover:text-brand-500 transition-colors">Projets</a>
+                <a href="#experience" data-i18n="nav.experience" class="text-adaptive-sub hover:text-brand-500 transition-colors">Parcours</a>
+                <a href="#contact" data-i18n="nav.contact" class="text-adaptive-sub hover:text-brand-500 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Language & Theme Switchers -->
+            <div class="flex items-center gap-3 sm:gap-4">
+                <!-- Language Switcher (FR / EN / DE) -->
+                <div class="flex bg-gray-200/80 dark:bg-gray-800/80 p-1 rounded-xl border border-adaptive text-xs font-semibold">
+                    <button onclick="setLanguage('fr')" id="lang-fr" class="lang-btn px-2.5 py-1 rounded-lg transition-all text-white bg-brand-600 shadow">FR</button>
+                    <button onclick="setLanguage('en')" id="lang-en" class="lang-btn px-2.5 py-1 rounded-lg transition-all text-adaptive-sub hover:text-brand-500">EN</button>
+                    <button onclick="setLanguage('de')" id="lang-de" class="lang-btn px-2.5 py-1 rounded-lg transition-all text-adaptive-sub hover:text-brand-500">DE</button>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="p-2.5 rounded-xl bg-gray-200/80 dark:bg-gray-800/80 text-adaptive-main border border-adaptive transition-all hover:scale-105" aria-label="Toggle theme">
+                    <i id="theme-icon" class="fas fa-sun text-amber-400"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-gray-200/80 dark:bg-gray-800/80 text-adaptive-main border border-adaptive" aria-label="Open Menu">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
         </div>
-        <div class="contact-options">
-            <ul class="social-icons">
-                <li><a href="https://web.facebook.com/profile.php?id=100008463370690" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/bilaldaoudi591" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/bilaldaoudi" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="mailto:bilaldaoudi591@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a></li>
-            </ul>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-adaptive px-6 py-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" data-i18n="nav.about" class="block text-lg font-medium text-adaptive-main hover:text-brand-500">À Propos</a>
+            <a href="#skills" onclick="toggleMobileMenu()" data-i18n="nav.skills" class="block text-lg font-medium text-adaptive-main hover:text-brand-500">Compétences</a>
+            <a href="#projects" onclick="toggleMobileMenu()" data-i18n="nav.projects" class="block text-lg font-medium text-adaptive-main hover:text-brand-500">Projets</a>
+            <a href="#experience" onclick="toggleMobileMenu()" data-i18n="nav.experience" class="block text-lg font-medium text-adaptive-main hover:text-brand-500">Parcours</a>
+            <a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav.contact" class="block text-lg font-medium text-adaptive-main hover:text-brand-500">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[90vh] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+    <!-- Effet de fond lumineux -->
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Colonne de Gauche : Grande Image avec Ombre / Lueur (Sans Cadre) -->
+           <div class="lg:col-span-5 flex justify-center">
+    <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-brand-500/20 hover:shadow-brand-500/40 transition-all duration-300 border border-white/10 glow-effect">
+        <img src="Design sans titre (1).png" alt="Bilal Daoudi" class="w-full h-full object-cover">
+    </div>
+</div>
+
+            <!-- Colonne de Droite : Texte, Boutons et Métriques -->
+            <div class="lg:col-span-7 text-left">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass border border-brand-500/30 text-xs sm:text-sm font-medium mb-6">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span data-i18n="hero.status" class="text-adaptive-main">Disponible pour des opportunités & projets</span>
+                </div>
+
+                <!-- Name & Title -->
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-4">
+                    <span data-i18n="hero.greeting" class="block text-adaptive-sub text-lg sm:text-2xl font-medium mb-1">Bonjour, je suis</span>
+                    <span class="gradient-text">Bilal Daoudi</span>
+                </h1>
+
+                <!-- Animated Dynamic Role -->
+                <p id="hero-role" class="text-xl sm:text-2xl font-semibold text-adaptive-main mb-6 h-8 flex items-center">
+                    Développeur Web Full Stack
+                </p>
+
+                <!-- Description -->
+                <p data-i18n="hero.description" class="text-adaptive-sub text-base sm:text-lg mb-8 leading-relaxed">
+                    Technicien Spécialisé en Développement Digital (Web Full Stack) basé à Nador/Zegangane, Maroc. Passionné par la création d'applications web modernes avec PHP, Laravel, React et l'intégration d'outils d'IA pour booster la productivité.
+                </p>
+
+                <!-- Call to Actions -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-12">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 text-white font-bold shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                        <span data-i18n="hero.cta_projects">Voir Mes Projets</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl glass hover:bg-brand-500/10 text-adaptive-main font-semibold transition-all flex items-center justify-center gap-2 border border-adaptive">
+                        <span data-i18n="hero.cta_contact">Me Contacter</span>
+                        <i class="fas fa-envelope text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Quick Metrics Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="glass p-4 rounded-2xl border border-adaptive">
+                        <div class="text-2xl font-black text-brand-500">6+</div>
+                        <div data-i18n="metrics.projects" class="text-xs text-adaptive-sub mt-1">Projets Réalisés</div>
+                    </div>
+                    <div class="glass p-4 rounded-2xl border border-adaptive">
+                        <div class="text-2xl font-black text-brand-500">2</div>
+                        <div data-i18n="metrics.internships" class="text-xs text-adaptive-sub mt-1">Stages Pro</div>
+                    </div>
+                    <div class="glass p-4 rounded-2xl border border-adaptive">
+                        <div class="text-2xl font-black text-brand-500">4</div>
+                        <div data-i18n="metrics.languages" class="text-xs text-adaptive-sub mt-1">Langues</div>
+                    </div>
+                    <div class="glass p-4 rounded-2xl border border-adaptive">
+                        <div class="text-2xl font-black text-brand-500">100%</div>
+                        <div data-i18n="metrics.motivation" class="text-xs text-adaptive-sub mt-1">Autonomie</div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
+</section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-adaptive">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 data-i18n="about.title" class="text-3xl sm:text-4xl font-black gradient-text inline-block mb-3">À Propos De Moi</h2>
+                    <p data-i18n="about.subtitle" class="text-adaptive-sub max-w-xl mx-auto">Développeur passionné par l'innovation logicielle et la création de solutions web sur-mesure.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <!-- Profile Avatar Card -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden glass p-3 border border-brand-500/30 glow-effect">
+                            <div class="w-full h-full bg-gradient-to-br from-brand-600/10 to-indigo-600/10 rounded-xl flex flex-col items-center justify-center p-6 text-center border border-adaptive">
+                                <!-- Conteneur agrandi (ex: w-36 h-36 ou w-40 h-40) -->
+                                <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center overflow-hidden mb-4 shadow-xl border-2 border-brand-500/30">
+                                    <img src="Design sans titre (1).png" alt="Bilal Daoudi" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="text-xl font-bold text-adaptive-main">Bilal Daoudi</h3>
+                                <p class="text-xs text-brand-500 font-semibold mt-1">Nador / Zegangane, Maroc 🇲🇦</p>
+                                <p class="text-xs text-adaptive-sub mt-3">Technicien Spécialisé Full-Stack</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Details & Bio -->
+                    <div class="md:col-span-7 space-y-6">
+                        <h3 data-i18n="about.heading" class="text-2xl font-bold text-adaptive-main">Développeur Web Full Stack & Passionné d'IA</h3>
+                        <p data-i18n="about.p1" class="text-adaptive-sub leading-relaxed text-sm sm:text-base">
+                            Basé à Nador / Zegangane (Maroc), je suis diplômé de l'Institut de Technologie Appliquée (OFPPT Nador) en tant que Technicien Spécialisé en Développement Digital (Web Full Stack).
+                        </p>
+                        <p data-i18n="about.p2" class="text-adaptive-sub leading-relaxed text-sm sm:text-base">
+                            Je maîtrise la conception d'applications web de bout en bout : de la modélisation de bases de données relationnelles à la création d'interfaces dynamiques et réactives. Je suis particulièrement intéressé par l'utilisation des outils d'intelligence artificielle pour optimiser le développement et accroître la productivité.
+                        </p>
+
+                        <!-- Highlight Badges -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="flex items-center gap-3 glass p-3.5 rounded-xl border border-adaptive">
+                                <i class="fas fa-check-circle text-brand-500 text-lg"></i>
+                                <span data-i18n="about.feat1" class="text-xs sm:text-sm font-medium text-adaptive-main">Architecture Web MVC & POO</span>
+                            </div>
+                            <div class="flex items-center gap-3 glass p-3.5 rounded-xl border border-adaptive">
+                                <i class="fas fa-check-circle text-brand-500 text-lg"></i>
+                                <span data-i18n="about.feat2" class="text-xs sm:text-sm font-medium text-adaptive-main">Bases de Données Relational & NoSQL</span>
+                            </div>
+                            <div class="flex items-center gap-3 glass p-3.5 rounded-xl border border-adaptive">
+                                <i class="fas fa-check-circle text-brand-500 text-lg"></i>
+                                <span data-i18n="about.feat3" class="text-xs sm:text-sm font-medium text-adaptive-main">Gestion de Projets & Autonomie</span>
+                            </div>
+                            <div class="flex items-center gap-3 glass p-3.5 rounded-xl border border-adaptive">
+                                <i class="fas fa-check-circle text-brand-500 text-lg"></i>
+                                <span data-i18n="about.feat4" class="text-xs sm:text-sm font-medium text-adaptive-main">Intégration d'Outils IA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-adaptive">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 data-i18n="skills.title" class="text-3xl sm:text-4xl font-black gradient-text inline-block mb-3">Compétences Techniques</h2>
+                    <p data-i18n="skills.subtitle" class="text-adaptive-sub max-w-xl mx-auto">Technologies et outils que j'utilise au quotidien pour réaliser des applications robustes.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Frontend -->
+                    <div class="glass p-6 rounded-2xl border border-adaptive hover:border-brand-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 data-i18n="skills.frontend" class="text-xl font-bold text-adaptive-main mb-4">Frontend</h3>
+                        <div class="space-y-3 text-sm text-adaptive-sub">
+                            <div class="flex justify-between"><span>HTML5 / CSS3 / Bootstrap</span></div>
+                            <div class="flex justify-between"><span>JavaScript (ES6+)</span></div>
+                            <div class="flex justify-between"><span>React.js</span></div>
+                            <div class="flex justify-between"><span>Tailwind CSS</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & DB -->
+                    <div class="glass p-6 rounded-2xl border border-adaptive hover:border-indigo-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 data-i18n="skills.backend" class="text-xl font-bold text-adaptive-main mb-4">Backend & SGBD</h3>
+                        <div class="space-y-3 text-sm text-adaptive-sub">
+                            <div class="flex justify-between"><span>PHP (POO) / CodeIgniter</span></div>
+                            <div class="flex justify-between"><span>Laravel</span></div>
+                            <div class="flex justify-between"><span>Node.js / Express.js / Python</span></div>
+                            <div class="flex justify-between"><span>MySQL / MongoDB</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Languages -->
+                    <div class="glass p-6 rounded-2xl border border-adaptive hover:border-emerald-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 data-i18n="skills.tools" class="text-xl font-bold text-adaptive-main mb-4">Génie Logiciel & Outils</h3>
+                        <div class="space-y-3 text-sm text-adaptive-sub">
+                            <div class="flex justify-between"><span>Git / GitHub / GitLab</span></div>
+                            <div class="flex justify-between"><span>VS Code / Docker / Postman</span></div>
+                            <div class="flex justify-between"><span>UML & Modélisation de Données</span></div>
+                            <div class="flex justify-between"><span>Conception & Architecture REST API</span></div>
+                            <div class="flex justify-between"><span>Figma / Agile & Scrum / Jira</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-adaptive">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 data-i18n="projects.title" class="text-3xl sm:text-4xl font-black gradient-text inline-block mb-3">Mes Réalisations</h2>
+                    <p data-i18n="projects.subtitle" class="text-adaptive-sub max-w-xl mx-auto">Découvrez les applications web développées en freelance, en entreprise ou durant mes études.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                    <button onclick="filterProjects('all')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow" data-filter="all" data-i18n="projects.f_all">Tous</button>
+                    <button onclick="filterProjects('webapp')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="webapp" data-i18n="projects.f_webapp">Apps Web</button>
+                    <button onclick="filterProjects('management')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="management" data-i18n="projects.f_management">Gestion & Stock</button>
+                    <button onclick="filterProjects('freelance')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="freelance" data-i18n="projects.f_freelance">Freelance</button>
+                </div>
+
+                <!-- Projects Dynamic Grid -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-adaptive">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 data-i18n="exp.title" class="text-3xl sm:text-4xl font-black gradient-text inline-block mb-3">Parcours & Formations</h2>
+                    <p data-i18n="exp.subtitle" class="text-adaptive-sub max-w-xl mx-auto">Mon itinéraire académique et mes expériences professionnelles en entreprise.</p>
+                </div>
+
+                <div class="relative border-l-2 border-brand-500/30 ml-4 sm:ml-32 space-y-12">
+                    
+                    <!-- Exp 1 -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-500 ring-4 ring-white dark:ring-darkbg group-hover:scale-125 transition-transform"></div>
+                        <div class="sm:absolute sm:-left-36 sm:top-0 text-xs sm:text-sm font-bold text-brand-500 mb-1 sm:mb-0">01/2024 - 03/2024</div>
+                        <div class="glass p-6 rounded-2xl border border-adaptive">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-brand-500/20 text-brand-500 mb-2 inline-block">Stage Professionnel</span>
+                            <h3 data-i18n="exp.job1_title" class="text-lg font-bold text-adaptive-main">Développement Full-Stack - MEDIA TECHLY SARL</h3>
+                            <p class="text-xs text-adaptive-sub mb-3">Nador, Maroc</p>
+                            <p data-i18n="exp.job1_desc" class="text-adaptive-sub text-sm leading-relaxed">
+                                Développement d'une application web dynamique avec PHP (CodeIgniter) et MySQL. Conception de la base de données relationnelle, intégration d'interfaces utilisateur (HTML, CSS, JS) et débogage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Exp 2 -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-white dark:ring-darkbg group-hover:scale-125 transition-transform"></div>
+                        <div class="sm:absolute sm:-left-36 sm:top-0 text-xs sm:text-sm font-bold text-indigo-500 mb-1 sm:mb-0">09/2023 - 11/2023</div>
+                        <div class="glass p-6 rounded-2xl border border-adaptive">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-indigo-500/20 text-indigo-500 mb-2 inline-block">Stage Professionnel</span>
+                            <h3 data-i18n="exp.job2_title" class="text-lg font-bold text-adaptive-main">Application d'Emploi du Temps - CMC Nador</h3>
+                            <p class="text-xs text-adaptive-sub mb-3">Cité des Métiers et des Compétences, Nador</p>
+                            <p data-i18n="exp.job2_desc" class="text-adaptive-sub text-sm leading-relaxed">
+                                Conception et développement d'une application de gestion des emplois du temps. Autonomie dans la prise en main du sujet, travail d'équipe et respect des délais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Edu 1 -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-darkbg group-hover:scale-125 transition-transform"></div>
+                        <div class="sm:absolute sm:-left-36 sm:top-0 text-xs sm:text-sm font-bold text-emerald-500 mb-1 sm:mb-0">2021 - 2023</div>
+                        <div class="glass p-6 rounded-2xl border border-adaptive">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-500 mb-2 inline-block">Diplôme d'État</span>
+                            <h3 data-i18n="edu.diploma1" class="text-lg font-bold text-adaptive-main">Technicien Spécialisé en Développement Digital (Web Full Stack)</h3>
+                            <p class="text-xs text-emerald-500 mb-2 font-medium">ISTA / OFPPT Nador</p>
+                            <p data-i18n="edu.diploma1_sub" class="text-adaptive-sub text-xs">Formation certifiante PIE (Programme d'Innovation Entrepreneuriale : de l'idée au projet viable).</p>
+                        </div>
+                    </div>
+
+                    <!-- Edu 2 -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-white dark:ring-darkbg group-hover:scale-125 transition-transform"></div>
+                        <div class="sm:absolute sm:-left-36 sm:top-0 text-xs sm:text-sm font-bold text-purple-500 mb-1 sm:mb-0">2020 - 2021</div>
+                        <div class="glass p-6 rounded-2xl border border-adaptive">
+                            <h3 data-i18n="edu.diploma2" class="text-lg font-bold text-adaptive-main">Études en Économie</h3>
+                            <p class="text-xs text-purple-500 font-medium">Faculté Mohamed 1, Nador</p>
+                        </div>
+                    </div>
+
+                    <!-- Edu 3 -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white dark:ring-darkbg group-hover:scale-125 transition-transform"></div>
+                        <div class="sm:absolute sm:-left-36 sm:top-0 text-xs sm:text-sm font-bold text-amber-500 mb-1 sm:mb-0">2020</div>
+                        <div class="glass p-6 rounded-2xl border border-adaptive">
+                            <h3 data-i18n="edu.diploma3" class="text-lg font-bold text-adaptive-main">Baccalauréat Bio-Géo</h3>
+                            <p class="text-xs text-amber-500 font-medium">Lycée Taha-Hussein, Nador</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-adaptive">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 data-i18n="contact.title" class="text-3xl sm:text-4xl font-black gradient-text inline-block mb-3">Me Contacter</h2>
+                    <p data-i18n="contact.subtitle" class="text-adaptive-sub max-w-xl mx-auto">Vous avez un projet web en tête ou une opportunité d'emploi ? Parlons-en !</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <!-- Direct Details Card -->
+                    <div class="md:col-span-5 space-y-4">
+                        <div class="glass p-5 rounded-2xl border border-adaptive flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-adaptive-sub font-semibold uppercase tracking-wider">Email</h4>
+                                <a href="mailto:bilaldaoudi591@gmail.com" class="text-adaptive-main font-medium hover:text-brand-500 transition-colors text-sm sm:text-base">bilaldaoudi591@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="glass p-5 rounded-2xl border border-adaptive flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-adaptive-sub font-semibold uppercase tracking-wider">Téléphone</h4>
+                                <a href="tel:+212707900867" class="text-adaptive-main font-medium hover:text-emerald-500 transition-colors text-sm sm:text-base">+212 7 079 008 67</a>
+                            </div>
+                        </div>
+
+                        <div class="glass p-5 rounded-2xl border border-adaptive flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-adaptive-sub font-semibold uppercase tracking-wider">Adresse</h4>
+                                <p class="text-adaptive-main font-medium text-sm sm:text-base">Nador / Zegangane, Maroc</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Networks -->
+                        <div class="glass p-5 rounded-2xl border border-adaptive flex items-center justify-around">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-adaptive-sub hover:text-brand-500 transition-colors text-2xl flex items-center gap-2">
+                                <i class="fab fa-github"></i>
+                                <span class="text-xs">GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-adaptive-sub hover:text-brand-500 transition-colors text-2xl flex items-center gap-2">
+                                <i class="fab fa-linkedin"></i>
+                                <span class="text-xs">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/212707900867" target="_blank" rel="noopener noreferrer" class="text-adaptive-sub hover:text-emerald-500 transition-colors text-2xl flex items-center gap-2">
+                                <i class="fab fa-whatsapp"></i>
+                                <span class="text-xs">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="md:col-span-7">
+    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="glass p-8 rounded-2xl border border-adaptive space-y-5">
+        <div>
+            <label data-i18n="contact.f_name" class="block text-xs font-semibold text-adaptive-main uppercase tracking-wider mb-2">Votre Nom</label>
+            <!-- Ajout de name="user_name" -->
+            <input type="text" id="input-name" name="user_name" required class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-900/80 border border-adaptive text-adaptive-main placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+        </div>
+        <div>
+            <label data-i18n="contact.f_email" class="block text-xs font-semibold text-adaptive-main uppercase tracking-wider mb-2">Votre Email</label>
+            <!-- Ajout de name="user_email" -->
+            <input type="email" id="input-email" name="user_email" required class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-900/80 border border-adaptive text-adaptive-main placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+        </div>
+        <div>
+            <label data-i18n="contact.f_msg" class="block text-xs font-semibold text-adaptive-main uppercase tracking-wider mb-2">Message</label>
+            <!-- Ajout de name="message" -->
+            <textarea id="input-msg" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-900/80 border border-adaptive text-adaptive-main placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 text-white font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all flex items-center justify-center gap-2">
+            <span data-i18n="contact.f_send">Envoyer le message</span>
+            <i class="fas fa-paper-plane text-xs"></i>
+        </button>
+    </form>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass border-t border-adaptive py-8 px-4 text-center text-xs text-adaptive-sub">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 Bilal Daoudi. <span data-i18n="footer.rights">Tous droits réservés.</span>
+            </div>
+            <div data-i18n="footer.location" class="text-adaptive-sub">
+                Nador / Zegangane, Maroc 🇲🇦
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Modal ("Voir le projet") -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="glass max-w-2xl w-full rounded-2xl overflow-hidden border border-adaptive max-h-[90vh] flex flex-col shadow-2xl">
+            <!-- Modal Banner Image -->
+            <div class="relative h-48 sm:h-60 overflow-hidden bg-gray-900">
+                <img id="modal-img" src="" alt="Project Banner" class="w-full h-full object-cover">
+                <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black flex items-center justify-center transition-colors" aria-label="Close Modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="p-6 sm:p-8 overflow-y-auto space-y-5">
+                <div>
+                    <span id="modal-category" class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-500/20 text-brand-500 border border-brand-500/30">Category</span>
+                    <h3 id="modal-title" class="text-2xl font-bold text-adaptive-main mt-2">Title</h3>
+                </div>
+
+                <div class="space-y-4 text-sm text-adaptive-sub">
+                    <div>
+                        <h4 data-i18n="modal.overview" class="text-xs uppercase tracking-wider text-adaptive-sub font-semibold mb-1">Présentation du projet</h4>
+                        <p id="modal-desc" class="leading-relaxed text-adaptive-main"></p>
+                    </div>
+
+                    <div>
+                        <h4 data-i18n="modal.client" class="text-xs uppercase tracking-wider text-adaptive-sub font-semibold mb-1">Client / Établissement</h4>
+                        <p id="modal-client" class="leading-relaxed text-brand-500 font-medium"></p>
+                    </div>
+
+                    <div>
+                        <h4 data-i18n="modal.tech" class="text-xs uppercase tracking-wider text-adaptive-sub font-semibold mb-2">Technologies utilisées</h4>
+                        <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex items-center justify-end gap-3 border-t border-adaptive">
+                    <button onclick="closeModal()" data-i18n="modal.close" class="px-5 py-2.5 rounded-xl glass text-adaptive-main hover:bg-brand-500/10 text-sm font-medium border border-adaptive">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 max-w-md glass border border-brand-500/40 p-4 rounded-xl shadow-2xl flex items-center gap-3 transition-all duration-300 toast-hidden pointer-events-none">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0">
+            <i class="fas fa-check-circle text-lg"></i>
+        </div>
+        <div id="toast-message" class="text-sm text-adaptive-main font-medium">Message envoyé avec succès !</div>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Multilingual Dictionaries (FR, EN, DE B1)
+        const translations = {
+            fr: {
+                "nav.about": "À Propos",
+                "nav.skills": "Compétences",
+                "nav.projects": "Projets",
+                "nav.experience": "Parcours",
+                "nav.contact": "Contact",
+                "hero.status": "Disponible pour des opportunités & projets",
+                "hero.greeting": "Bonjour, je suis",
+                "hero.role1": "Développeur Web Full Stack",
+                "hero.role2": "Spécialiste PHP / Laravel & React",
+                "hero.role3": "Intégrateur de Solutions d'IA",
+                "hero.description": "Technicien Spécialisé en Développement Digital (Web Full Stack) basé à Nador / Zegangane, Maroc. Passionné par la création d'applications web modernes avec PHP, Laravel, React et l'intégration d'outils d'IA.",
+                "hero.cta_projects": "Voir Mes Projets",
+                "hero.cta_contact": "Me Contacter",
+                "metrics.projects": "Projets Réalisés",
+                "metrics.internships": "Stages Professionnels",
+                "metrics.languages": "Langues Maîtrisées",
+                "metrics.motivation": "Engagement & Autonomie",
+                "about.title": "À Propos De Moi",
+                "about.subtitle": "Développeur passionné par l'innovation logicielle et la création de solutions web sur-mesure.",
+                "about.heading": "Développeur Web Full Stack & Passionné d'IA",
+                "about.p1": "Basé à Nador / Zegangane (Maroc), je suis diplômé de l'Institut de Technologie Appliquée (OFPPT Nador) en tant que Technicien Spécialisé en Développement Digital (Web Full Stack).",
+                "about.p2": "Je maîtrise la conception d'applications web de bout en bout : de la modélisation de bases de données relationnelles à la création d'interfaces dynamiques et réactives. Intéressé par l'utilisation des outils d'IA pour booster la productivité.",
+                "about.feat1": "Architecture Web MVC & POO",
+                "about.feat2": "Bases de Données Relational & NoSQL",
+                "about.feat3": "Gestion de Projets & Autonomie",
+                "about.feat4": "Intégration d'Outils IA",
+                "skills.title": "Compétences Techniques",
+                "skills.subtitle": "Technologies et outils que j'utilise au quotidien pour réaliser des applications robustes.",
+                "skills.frontend": "Frontend",
+                "skills.backend": "Backend & SGBD",
+                "skills.tools": "Génie Logiciel & Outils",
+                "projects.title": "Mes Réalisations",
+                "projects.subtitle": "Découvrez les applications web développées en freelance, en entreprise ou durant mes études.",
+                "projects.f_all": "Tous",
+                "projects.f_webapp": "Apps Web",
+                "projects.f_management": "Gestion & Stock",
+                "projects.f_freelance": "Freelance",
+                "projects.view": "Voir le projet",
+                "exp.title": "Parcours & Formations",
+                "exp.subtitle": "Mon itinéraire académique et mes expériences professionnelles en entreprise.",
+                "exp.job1_title": "Développement Full-Stack - MEDIA TECHLY SARL",
+                "exp.job1_desc": "Développement d'une application web dynamique avec PHP (CodeIgniter) et MySQL. Conception de la base de données relationnelle, intégration d'interfaces utilisateur (HTML, CSS, JS) et débogage.",
+                "exp.job2_title": "Application d'Emploi du Temps - CMC Nador",
+                "exp.job2_desc": "Conception et développement d'une application de gestion des emplois du temps. Autonomie dans la prise en main du sujet, travail d'équipe et respect des délais.",
+                "edu.diploma1": "Technicien Spécialisé en Développement Digital (Web Full Stack)",
+                "edu.diploma1_sub": "Formation certifiante PIE (Programme d'Innovation Entrepreneuriale).",
+                "edu.diploma2": "Études en Économie - Faculté Mohamed 1",
+                "edu.diploma3": "Baccalauréat Bio-Géo - Lycée Taha-Hussein",
+                "contact.title": "Me Contacter",
+                "contact.subtitle": "Vous avez un projet web en tête ou une opportunité d'emploi ? Parlons-en !",
+                "contact.f_name": "Votre Nom",
+                "contact.f_email": "Votre Email",
+                "contact.f_msg": "Message",
+                "contact.f_send": "Envoyer le message",
+                "contact.ph_name": "Ex: Mohammed Amine",
+                "contact.ph_email": "Ex: mohammed@example.com",
+                "contact.ph_msg": "Décrivez votre projet ou demande...",
+                "contact.success": "Votre message a été envoyé avec succès !",
+                "footer.rights": "Tous droits réservés.",
+                "footer.location": "Nador / Zegangane, Maroc 🇲🇦",
+                "modal.overview": "Présentation du projet",
+                "modal.client": "Client / Établissement",
+                "modal.tech": "Technologies utilisées",
+                "modal.close": "Fermer"
+            },
+            en: {
+                "nav.about": "About",
+                "nav.skills": "Skills",
+                "nav.projects": "Projects",
+                "nav.experience": "Experience",
+                "nav.contact": "Contact",
+                "hero.status": "Available for new opportunities & projects",
+                "hero.greeting": "Hello, I am",
+                "hero.role1": "Full Stack Web Developer",
+                "hero.role2": "PHP / Laravel & React Specialist",
+                "hero.role3": "AI Tools Integrator",
+                "hero.description": "Specialized Technician in Digital Development (Web Full Stack) based in Nador / Zegangane, Morocco. Passionate about building modern web applications with PHP, Laravel, React, and AI tools integration.",
+                "hero.cta_projects": "View My Work",
+                "hero.cta_contact": "Get In Touch",
+                "metrics.projects": "Projects Completed",
+                "metrics.internships": "Internships Completed",
+                "metrics.languages": "Languages Spoken",
+                "metrics.motivation": "Commitment & Autonomy",
+                "about.title": "About Me",
+                "about.subtitle": "Developer passionate about software innovation and crafting tailored web solutions.",
+                "about.heading": "Full Stack Web Developer & AI Enthusiast",
+                "about.p1": "Based in Nador / Zegangane (Morocco), I graduated from the Applied Technology Institute (OFPPT Nador) as a Specialized Technician in Digital Development (Web Full Stack).",
+                "about.p2": "I master end-to-end web application development: from relational database modeling to dynamic and responsive user interface creation. Interested in using AI tools to boost developer productivity.",
+                "about.feat1": "MVC & OOP Web Architecture",
+                "about.feat2": "Relational & NoSQL Databases",
+                "about.feat3": "Project Management & Autonomy",
+                "about.feat4": "AI Tools Integration",
+                "skills.title": "Technical Skills",
+                "skills.subtitle": "Technologies and tools I use daily to deliver robust web applications.",
+                "skills.frontend": "Frontend",
+                "skills.backend": "Backend & DBMS",
+                "skills.tools": "Software Engineering & Tools",
+                "projects.title": "My Projects",
+                "projects.subtitle": "Discover web applications developed in freelance, during internships, or academic projects.",
+                "projects.f_all": "All",
+                "projects.f_webapp": "Web Apps",
+                "projects.f_management": "Management & Stock",
+                "projects.f_freelance": "Freelance",
+                "projects.view": "View Project",
+                "exp.title": "Career & Education",
+                "exp.subtitle": "My academic journey and professional internships in tech companies.",
+                "exp.job1_title": "Full-Stack Development - MEDIA TECHLY SARL",
+                "exp.job1_desc": "Development of a dynamic web application with PHP (CodeIgniter) and MySQL. Relational database design, UI integration (HTML, CSS, JS), and debugging.",
+                "exp.job2_title": "Timetable Management App - CMC Nador",
+                "exp.job2_desc": "Design and development of a schedule management application. Quick learning curve, teamwork, and strict adherence to project deadlines.",
+                "edu.diploma1": "Specialized Technician in Digital Development (Web Full Stack)",
+                "edu.diploma1_sub": "Entrepreneurial Innovation Program (PIE) certification.",
+                "edu.diploma2": "Economics Studies - Mohamed 1 University",
+                "edu.diploma3": "High School Diploma (Bio-Geo) - Taha-Hussein High School",
+                "contact.title": "Contact Me",
+                "contact.subtitle": "Have a web project or a job opportunity? Let's talk!",
+                "contact.f_name": "Your Name",
+                "contact.f_email": "Your Email",
+                "contact.f_msg": "Message",
+                "contact.f_send": "Send Message",
+                "contact.ph_name": "Ex: John Doe",
+                "contact.ph_email": "Ex: john@example.com",
+                "contact.ph_msg": "Describe your project or request...",
+                "contact.success": "Your message has been sent successfully!",
+                "footer.rights": "All rights reserved.",
+                "footer.location": "Nador / Zegangane, Morocco 🇲🇦",
+                "modal.overview": "Project Overview",
+                "modal.client": "Client / Organization",
+                "modal.tech": "Technologies Used",
+                "modal.close": "Close"
+            },
+            de: {
+                "nav.about": "Über mich",
+                "nav.skills": "Fähigkeiten",
+                "nav.projects": "Projekte",
+                "nav.experience": "Erfahrung",
+                "nav.contact": "Kontakt",
+                "hero.status": "Verfügbar für neue Möglichkeiten & Projekte",
+                "hero.greeting": "Hallo, ich bin",
+                "hero.role1": "Full-Stack Webentwickler",
+                "hero.role2": "Spezialist für PHP / Laravel & React",
+                "hero.role3": "Integrator von KI-Tools",
+                "hero.description": "Staatlich geprüfter Techniker für digitale Entwicklung (Web Full Stack) aus Nador / Zegangane, Marokko. Leidenschaftlich für moderne Webanwendungen mit PHP, Laravel, React und KI-Tools.",
+                "hero.cta_projects": "Projekte ansehen",
+                "hero.cta_contact": "Kontaktieren",
+                "metrics.projects": "Realisierte Projekte",
+                "metrics.internships": "Praktika",
+                "metrics.languages": "Gesprochene Sprachen",
+                "metrics.motivation": "Engagement & Autonomie",
+                "about.title": "Über mich",
+                "about.subtitle": "Entwickler mit Leidenschaft für Softwareinnovation und maßgeschneiderte Weblösungen.",
+                "about.heading": "Full-Stack Webentwickler & KI-Enthusiast",
+                "about.p1": "Wohnhaft in Nador / Zegangane (Marokko). Absolvent des Instituts für Angewandte Technologie (OFPPT Nador) als Spezialisierter Techniker für Web Full Stack.",
+                "about.p2": "Beherrschung der Webentwicklung von A bis Z: von relationaler Datenbankmodellierung bis zu dynamischen Benutzeroberflächen. Interessiert an der Nutzung von KI-Tools zur Produktivitätssteigerung.",
+                "about.feat1": "MVC & OOP Web-Architektur",
+                "about.feat2": "Relationale & NoSQL Datenbanken",
+                "about.feat3": "Projektmanagement & Autonomie",
+                "about.feat4": "Integration von KI-Tools",
+                "skills.title": "Technische Fähigkeiten",
+                "skills.subtitle": "Technologien und Tools, die ich täglich für die Erstellung robuster Webanwendungen verwende.",
+                "skills.frontend": "Frontend",
+                "skills.backend": "Backend & DBMS",
+                "skills.tools": "Softwareentwicklung & Tools",
+                "projects.title": "Meine Projekte",
+                "projects.subtitle": "Entdecken Sie Webanwendungen aus Freelance-Projekten, Praktika und Studium.",
+                "projects.f_all": "Alle",
+                "projects.f_webapp": "Web-Apps",
+                "projects.f_management": "Verwaltung & Lager",
+                "projects.f_freelance": "Freelance",
+                "projects.view": "Projekt ansehen",
+                "exp.title": "Karriere & Ausbildung",
+                "exp.subtitle": "Mein akademischer Weg und meine beruflichen Praktika in IT-Unternehmen.",
+                "exp.job1_title": "Full-Stack Entwicklung - MEDIA TECHLY SARL",
+                "exp.job1_desc": "Entwicklung einer dynamischen Webanwendung mit PHP (CodeIgniter) und MySQL. Entwurf relationaler Datenbanken, UI-Integration und Debugging.",
+                "exp.job2_title": "Stundenplan-Verwaltungs-App - CMC Nador",
+                "exp.job2_desc": "Konzeption und Entwicklung einer Anwendung zur Stundenplanverwaltung. Schnelles Einarbeiten, Teamarbeit und Fristeneinhaltung.",
+                "edu.diploma1": "Spezialisierter Techniker für Digitale Entwicklung (Web Full Stack)",
+                "edu.diploma1_sub": "Zertifiziert im Entrepreneurial Innovation Program (PIE).",
+                "edu.diploma2": "Wirtschaftswissenschaften - Mohamed 1 Universität",
+                "edu.diploma3": "Abitur (Bio-Geologie) - Taha-Hussein Gymnasium",
+                "contact.title": "Kontaktieren Sie mich",
+                "contact.subtitle": "Haben Sie ein Webprojekt oder ein Stellenangebot? Lassen Sie uns sprechen!",
+                "contact.f_name": "Ihr Name",
+                "contact.f_email": "Ihre E-Mail",
+                "contact.f_msg": "Nachricht",
+                "contact.f_send": "Nachricht senden",
+                "contact.ph_name": "Z.B. Max Mustermann",
+                "contact.ph_email": "Z.B. max@example.com",
+                "contact.ph_msg": "Beschreiben Sie Ihr Projekt...",
+                "contact.success": "Ihre Nachricht wurde erfolgreich gesendet!",
+                "footer.rights": "Alle Rechte vorbehalten.",
+                "footer.location": "Nador / Zegangane, Marokko 🇲🇦",
+                "modal.overview": "Projektübersicht",
+                "modal.client": "Kunde / Organisation",
+                "modal.tech": "Verwendete Technologien",
+                "modal.close": "Schließen"
+            }
+        };
+
+        // Complete Projects Database including all requested items
+        const projectsData = [
+            {
+                id: 1,
+                category: "freelance",
+                tags: ["PHP", "Laravel", "MySQL", "JavaScript", "Tailwind"],
+                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+                year: "2026",
+                fr: {
+                    title: "Suivi des Commandes & Employés",
+                    client: "Centre d'impression 'Al Boraq', Aaroui | Freelance",
+                    desc: "Application web complète de gestion des flux de travaux d'impression, attribution des tâches aux employés et suivi temps réel du statut des commandes."
+                },
+                en: {
+                    title: "Orders & Employee Tracking App",
+                    client: "Al Boraq Printing Center, Aaroui | Freelance",
+                    desc: "Comprehensive web app for printing workflow management, employee task assignment, and real-time order status tracking."
+                },
+                de: {
+                    title: "Auftrags- & Mitarbeiterverfolgung",
+                    client: "Druckzentrum 'Al Boraq', Aaroui | Freelance",
+                    desc: "Umfassende Webanwendung zur Verwaltung von Druckarbeitsabläufen, Aufgabenvergabe an Mitarbeiter und Auftragsverfolgung in Echtzeit."
+                }
+            },
+            {
+                id: 2,
+                category: "management",
+                tags: ["PHP", "CodeIgniter", "MySQL", "Bootstrap", "JS"],
+                img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+                year: "2025",
+                fr: {
+                    title: "Gestion des Stocks & Ventes",
+                    client: "Cartograph Digital, Zegangane | Freelance",
+                    desc: "Système web d'inventaire automatisé avec alertes de seuil de stock, génération de factures et rapports de ventes mensuels."
+                },
+                en: {
+                    title: "Inventory & Sales Management",
+                    client: "Cartograph Digital, Zegangane | Freelance",
+                    desc: "Automated inventory web system featuring low-stock alerts, invoice generation, and monthly sales analytics."
+                },
+                de: {
+                    title: "Lager- & Verkaufsverwaltung",
+                    client: "Cartograph Digital, Zegangane | Freelance",
+                    desc: "Automatisierte Lager-Webanwendung mit Warnmeldungen bei niedrigem Bestand, Rechnungsstellung und Monatsberichten."
+                }
+            },
+            {
+                id: 3,
+                category: "freelance",
+                tags: ["JavaScript", "React.js", "Node.js", "Express", "MySQL"],
+                img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80",
+                year: "2024",
+                fr: {
+                    title: "Plateforme Agence de Transport",
+                    client: "HIBA TRANS, Nador | Freelance",
+                    desc: "Solution web pour agences de voyage et transport. Réservation en ligne, gestion de la flotte et suivi logistique des trajets."
+                },
+                en: {
+                    title: "Transport Agency Platform",
+                    client: "HIBA TRANS, Nador | Freelance",
+                    desc: "Web solution for transport and travel agencies. Online booking, fleet management, and logistics route tracking."
+                },
+                de: {
+                    title: "Plattform für Transportagentur",
+                    client: "HIBA TRANS, Nador | Freelance",
+                    desc: "Weblösung für Transport- und Reiseagenturen. Online-Buchung, Flottenmanagement und Routenverfolgung."
+                }
+            },
+            {
+                id: 4,
+                category: "webapp",
+                tags: ["PHP", "MySQL", "APIs", "JavaScript", "HTML/CSS"],
+                img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+                year: "2023",
+                fr: {
+                    title: "Gestion des Devises & Taux",
+                    client: "Projet Freelance",
+                    desc: "Application d'analyse et de conversion de devises en temps réel via l'intégration d'APIs financières et historiques."
+                },
+                en: {
+                    title: "Currency Management & Rates",
+                    client: "Freelance Project",
+                    desc: "Real-time currency exchange conversion and analytics web tool integrated with financial market APIs."
+                },
+                de: {
+                    title: "Währungs- & Kursverwaltung",
+                    client: "Freelance-Projekt",
+                    desc: "Echtzeit-Währungsumrechnung und Finanzanalyse-Webtool mit Anbindung an Finanzmarkt-APIs."
+                }
+            },
+            {
+                id: 5,
+                category: "webapp",
+                tags: ["PHP", "POO", "MySQL", "UML", "Bootstrap"],
+                img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+                year: "2022",
+                fr: {
+                    title: "Gestion d'Institut d'Enseignement",
+                    client: "ISTA Nador | Projet Étudiant",
+                    desc: "Plateforme académique de gestion des étudiants, des cours, des absences et des notes avec rôles d'administration distincts."
+                },
+                en: {
+                    title: "Institute Management System",
+                    client: "ISTA Nador | Academic Project",
+                    desc: "Academic platform for managing students, courses, attendance, and grades with multi-role admin controls."
+                },
+                de: {
+                    title: "Institutsverwaltungssystem",
+                    client: "ISTA Nador | Akademisches Projekt",
+                    desc: "Akademische Plattform zur Verwaltung von Studenten, Kursen, Anwesenheiten und Noten mit Admin-Rollen."
+                }
+            },
+            {
+                id: 6,
+                category: "freelance",
+                tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+                img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+                year: "2022",
+                fr: {
+                    title: "Application Salle de Sport",
+                    client: "Association El Qods, Zegangane | Freelance",
+                    desc: "Logiciel web de gestion des abonnements de la salle de sport, suivi des membres et contrôle des accès."
+                },
+                en: {
+                    title: "Gym Management Application",
+                    client: "El Qods Association, Zegangane | Freelance",
+                    desc: "Web application for gym memberships, member tracking, and entry access control."
+                },
+                de: {
+                    title: "Fitnessstudio-Verwaltungs-App",
+                    client: "Vereinigung El Qods, Zegangane | Freelance",
+                    desc: "Webanwendung für Fitnessstudio-Mitgliedschaften, Mitgliederverfolgung und Zugangskontrolle."
+                }
+            }
+        ];
+
+        let currentLang = 'fr';
+        let activeFilter = 'all';
+
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('bilal_theme') || 'dark';
+            applyTheme(savedTheme);
+
+            const savedLang = localStorage.getItem('bilal_lang') || 'fr';
+            setLanguage(savedLang);
+
+            startRoleAnimation();
+        });
+
+        // Theme Toggle Engine
+        function applyTheme(theme) {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (theme === 'dark') {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                if (icon) icon.className = 'fas fa-sun text-amber-400';
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                if (icon) icon.className = 'fas fa-moon text-indigo-600';
+            }
+            localStorage.setItem('bilal_theme', theme);
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+            applyTheme(isDark ? 'light' : 'dark');
+        }
+
+        // Language Engine
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            localStorage.setItem('bilal_lang', lang);
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow');
+                btn.classList.add('text-adaptive-sub');
+            });
+            const activeBtn = document.getElementById(`lang-${lang}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-brand-600', 'text-white', 'shadow');
+                activeBtn.classList.remove('text-adaptive-sub');
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            const nInput = document.getElementById('input-name');
+            const eInput = document.getElementById('input-email');
+            const mInput = document.getElementById('input-msg');
+
+            if (nInput) nInput.placeholder = translations[lang]["contact.ph_name"];
+            if (eInput) eInput.placeholder = translations[lang]["contact.ph_email"];
+            if (mInput) mInput.placeholder = translations[lang]["contact.ph_msg"];
+
+            renderProjects();
+        }
+
+        // Role Animation
+        function startRoleAnimation() {
+            const roleEl = document.getElementById('hero-role');
+            if (!roleEl) return;
+
+            let roleIdx = 0;
+            const updateText = () => {
+                const roles = [
+                    translations[currentLang]["hero.role1"],
+                    translations[currentLang]["hero.role2"],
+                    translations[currentLang]["hero.role3"]
+                ];
+                roleEl.style.opacity = '0';
+                roleEl.style.transform = 'translateY(8px)';
+                roleEl.style.transition = 'all 0.35s ease';
+
+                setTimeout(() => {
+                    roleEl.textContent = roles[roleIdx % roles.length];
+                    roleEl.style.opacity = '1';
+                    roleEl.style.transform = 'translateY(0)';
+                    roleIdx++;
+                }, 350);
+            };
+
+            updateText();
+            setInterval(updateText, 3200);
+        }
+
+        // Render Projects
+        function renderProjects() {
+            const grid = document.getElementById('projects-grid');
+            if (!grid) return;
+
+            const filtered = activeFilter === 'all'
+                ? projectsData
+                : projectsData.filter(p => p.category === activeFilter);
+
+            grid.innerHTML = filtered.map(p => {
+                const content = p[currentLang] || p.fr;
+                return `
+                    <div class="glass rounded-2xl overflow-hidden border border-adaptive hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 overflow-hidden bg-gray-900">
+                                <img src="${p.img}" alt="${content.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 text-[10px] font-extrabold px-2.5 py-1 rounded-md bg-black/70 text-brand-400 border border-brand-500/30">${p.year}</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-bold text-adaptive-main mb-1">${content.title}</h3>
+                                <p class="text-xs text-brand-500 font-medium mb-3">${content.client}</p>
+                                <p class="text-adaptive-sub text-xs leading-relaxed mb-4">${content.desc}</p>
+                                <div class="flex flex-wrap gap-1.5 mb-4">
+                                    ${p.tags.map(t => `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-800 text-adaptive-main border border-adaptive">${t}</span>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <button onclick="openModal(${p.id})" class="w-full py-2.5 rounded-xl glass hover:bg-brand-600 hover:text-white text-adaptive-main text-xs font-semibold transition-all flex items-center justify-center gap-2 border border-adaptive">
+                                <span>${translations[currentLang]["projects.view"]}</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Project Filtering
+        function filterProjects(cat) {
+            activeFilter = cat;
+            document.querySelectorAll('.project-filter-btn').forEach(btn => {
+                const filter = btn.getAttribute('data-filter');
+                if (filter === cat) {
+                    btn.className = "project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow";
+                } else {
+                    btn.className = "project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive";
+                }
+            });
+            renderProjects();
+        }
+
+        // Modal Controls
+        function openModal(id) {
+            const project = projectsData.find(p => p.id === id);
+            if (!project) return;
+
+            const content = project[currentLang] || project.fr;
+
+            document.getElementById('modal-img').src = project.img;
+            document.getElementById('modal-title').textContent = content.title;
+            document.getElementById('modal-client').textContent = content.client;
+            document.getElementById('modal-category').textContent = project.category.toUpperCase();
+            document.getElementById('modal-desc').textContent = content.desc;
+
+            const tagsContainer = document.getElementById('modal-tags');
+            tagsContainer.innerHTML = project.tags.map(t => `<span class="text-xs font-medium px-3 py-1 rounded-lg bg-gray-200 dark:bg-gray-800 text-brand-500 border border-adaptive">${t}</span>`).join('');
+
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // // Form Submit Handler
+        // function handleContactSubmit(e) {
+        //     e.preventDefault();
+        //     const toast = document.getElementById('toast');
+        //     const toastMsg = document.getElementById('toast-message');
+
+        //     toastMsg.textContent = translations[currentLang]["contact.success"];
+        //     toast.classList.remove('toast-hidden', 'pointer-events-none');
+        //     toast.classList.add('toast-visible');
+
+        //     document.getElementById('contact-form').reset();
+
+        //     setTimeout(() => {
+        //         toast.classList.remove('toast-visible');
+        //         toast.classList.add('toast-hidden', 'pointer-events-none');
+        //     }, 3800);
+        // }
+        // Initialiser EmailJS avec votre Public Key (À remplacer)
+emailjs.init("D87ely23wPANox2IL");
+
+function handleContactSubmit(e) {
+    e.preventDefault();
+
+    const form = document.getElementById('contact-form');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+
+    // Identifiants EmailJS (À remplacer)
+    const serviceID = "service_ch20k69";
+    const templateID = "template_yfwfd37";
+
+    // Envoi de l'e-mail via EmailJS
+    emailjs.sendForm(serviceID, templateID, form)
+        .then(() => {
+            // Message de succès
+            toastMsg.textContent = translations[currentLang]["contact.success"];
+            toast.classList.remove('toast-hidden', 'pointer-events-none');
+            toast.classList.add('toast-visible');
+
+            form.reset();
+
+            setTimeout(() => {
+                toast.classList.remove('toast-visible');
+                toast.classList.add('toast-hidden', 'pointer-events-none');
+            }, 3800);
+        })
+        .catch((error) => {
+            console.error("Erreur lors de l'envoi :", error);
+            alert("Une erreur est survenue lors de l'envoi du message.");
+        });
+}
+    </script>
+   
 </body>
 </html>
