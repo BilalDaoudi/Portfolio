@@ -119,7 +119,7 @@
                 <div class="flex bg-gray-200/80 dark:bg-gray-800/80 p-1 rounded-xl border border-adaptive text-xs font-semibold">
                     <button onclick="setLanguage('fr')" id="lang-fr" class="lang-btn px-2.5 py-1 rounded-lg transition-all text-white bg-brand-600 shadow">FR</button>
                     <button onclick="setLanguage('en')" id="lang-en" class="lang-btn px-2.5 py-1 rounded-lg transition-all text-adaptive-sub hover:text-brand-500">EN</button>
-                    <button onclick="setLanguage('de')" id="lang-de" class="lang-btn px-2.5 py-1 rounded-lg transition-all text-adaptive-sub hover:text-brand-500">DE</button>
+                    <!-- <button onclick="setLanguage('de')" id="lang-de" class="lang-btn px-2.5 py-1 rounded-lg transition-all text-adaptive-sub hover:text-brand-500">DE</button> -->
                 </div>
 
                 <!-- Theme Toggle -->
@@ -156,7 +156,7 @@
             <!-- Colonne de Gauche : Grande Image avec Ombre / Lueur (Sans Cadre) -->
            <div class="lg:col-span-5 flex justify-center">
     <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-brand-500/20 hover:shadow-brand-500/40 transition-all duration-300 border border-white/10 glow-effect">
-        <img src="Design sans titre (1).png" alt="Bilal Daoudi" class="w-full h-full object-cover">
+        <img src="profile.png" alt="Bilal Daoudi" class="w-full h-full object-cover">
     </div>
 </div>
 
@@ -231,14 +231,14 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                    <!-- Profile Avatar Card -->
+                   <!-- Profile Avatar Card -->
 <div class="md:col-span-5 flex justify-center w-full px-4">
     <div class="relative w-full max-w-xs sm:w-80 rounded-2xl overflow-hidden glass p-3 border border-brand-500/30 glow-effect">
         <div class="w-full h-full bg-gradient-to-br from-brand-600/10 to-indigo-600/10 rounded-xl flex flex-col items-center justify-center p-6 text-center border border-adaptive">
             
             <!-- Conteneur de l'avatar optimisé pour mobile -->
             <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center overflow-hidden mb-4 shadow-xl border-2 border-brand-500/30">
-                <img src="Design sans titre (1).png" alt="Bilal Daoudi" class="w-full h-full object-cover object-top">
+                <img src="profile.png" alt="Bilal Daoudi" class="w-full h-full object-cover object-top">
             </div>
             
             <h3 class="text-xl font-bold text-adaptive-main">Bilal Daoudi</h3>
@@ -349,8 +349,9 @@
                 <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
                     <button onclick="filterProjects('all')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow" data-filter="all" data-i18n="projects.f_all">Tous</button>
                     <button onclick="filterProjects('webapp')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="webapp" data-i18n="projects.f_webapp">Apps Web</button>
-                    <button onclick="filterProjects('management')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="management" data-i18n="projects.f_management">Gestion & Stock</button>
-                    <button onclick="filterProjects('freelance')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="freelance" data-i18n="projects.f_freelance">Freelance</button>
+                    <button onclick="filterProjects('Website')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="website" data-i18n="projects.f_website">Website</button>
+                    <!-- <button onclick="filterProjects('management')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="management" data-i18n="projects.f_management">Gestion & Stock</button>
+                    <button onclick="filterProjects('freelance')" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass text-adaptive-sub hover:text-adaptive-main border border-adaptive" data-filter="freelance" data-i18n="projects.f_freelance">Freelance</button> -->
                 </div>
 
                 <!-- Projects Dynamic Grid -->
@@ -621,6 +622,7 @@
                 "projects.subtitle": "Découvrez les applications web développées en freelance, en entreprise ou durant mes études.",
                 "projects.f_all": "Tous",
                 "projects.f_webapp": "Apps Web",
+                "projects.f_website": "Site web",
                 "projects.f_management": "Gestion & Stock",
                 "projects.f_freelance": "Freelance",
                 "projects.view": "Voir le projet",
@@ -687,6 +689,7 @@
                 "projects.subtitle": "Discover web applications developed in freelance, during internships, or academic projects.",
                 "projects.f_all": "All",
                 "projects.f_webapp": "Web Apps",
+                "projects.f_website": "Website",
                 "projects.f_management": "Management & Stock",
                 "projects.f_freelance": "Freelance",
                 "projects.view": "View Project",
@@ -753,6 +756,8 @@
                 "projects.subtitle": "Entdecken Sie Webanwendungen aus Freelance-Projekten, Praktika und Studium.",
                 "projects.f_all": "Alle",
                 "projects.f_webapp": "Web-Apps",
+                
+                "projects.f_website": "Website",
                 "projects.f_management": "Verwaltung & Lager",
                 "projects.f_freelance": "Freelance",
                 "projects.view": "Projekt ansehen",
@@ -786,140 +791,250 @@
         };
 
         // Complete Projects Database including all requested items
-        const projectsData = [
-            {
-                id: 1,
-                category: "freelance",
-                tags: ["PHP", "Laravel", "MySQL", "JavaScript", "Tailwind"],
-                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-                year: "2026",
-                fr: {
-                    title: "Suivi des Commandes & Employés",
-                    client: "Centre d'impression 'Al Boraq', Aaroui | Freelance",
-                    desc: "Application web complète de gestion des flux de travaux d'impression, attribution des tâches aux employés et suivi temps réel du statut des commandes."
-                },
-                en: {
-                    title: "Orders & Employee Tracking App",
-                    client: "Al Boraq Printing Center, Aaroui | Freelance",
-                    desc: "Comprehensive web app for printing workflow management, employee task assignment, and real-time order status tracking."
-                },
-                de: {
-                    title: "Auftrags- & Mitarbeiterverfolgung",
-                    client: "Druckzentrum 'Al Boraq', Aaroui | Freelance",
-                    desc: "Umfassende Webanwendung zur Verwaltung von Druckarbeitsabläufen, Aufgabenvergabe an Mitarbeiter und Auftragsverfolgung in Echtzeit."
-                }
-            },
-            {
-                id: 2,
-                category: "management",
-                tags: ["PHP", "CodeIgniter", "MySQL", "Bootstrap", "JS"],
-                img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-                year: "2025",
-                fr: {
-                    title: "Gestion des Stocks & Ventes",
-                    client: "Cartograph Digital, Zegangane | Freelance",
-                    desc: "Système web d'inventaire automatisé avec alertes de seuil de stock, génération de factures et rapports de ventes mensuels."
-                },
-                en: {
-                    title: "Inventory & Sales Management",
-                    client: "Cartograph Digital, Zegangane | Freelance",
-                    desc: "Automated inventory web system featuring low-stock alerts, invoice generation, and monthly sales analytics."
-                },
-                de: {
-                    title: "Lager- & Verkaufsverwaltung",
-                    client: "Cartograph Digital, Zegangane | Freelance",
-                    desc: "Automatisierte Lager-Webanwendung mit Warnmeldungen bei niedrigem Bestand, Rechnungsstellung und Monatsberichten."
-                }
-            },
-            {
-                id: 3,
-                category: "freelance",
-                tags: ["JavaScript", "React.js", "Node.js", "Express", "MySQL"],
-                img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80",
-                year: "2024",
-                fr: {
-                    title: "Plateforme Agence de Transport",
-                    client: "HIBA TRANS, Nador | Freelance",
-                    desc: "Solution web pour agences de voyage et transport. Réservation en ligne, gestion de la flotte et suivi logistique des trajets."
-                },
-                en: {
-                    title: "Transport Agency Platform",
-                    client: "HIBA TRANS, Nador | Freelance",
-                    desc: "Web solution for transport and travel agencies. Online booking, fleet management, and logistics route tracking."
-                },
-                de: {
-                    title: "Plattform für Transportagentur",
-                    client: "HIBA TRANS, Nador | Freelance",
-                    desc: "Weblösung für Transport- und Reiseagenturen. Online-Buchung, Flottenmanagement und Routenverfolgung."
-                }
-            },
-            {
-                id: 4,
-                category: "webapp",
-                tags: ["PHP", "MySQL", "APIs", "JavaScript", "HTML/CSS"],
-                img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
-                year: "2023",
-                fr: {
-                    title: "Gestion des Devises & Taux",
-                    client: "Projet Freelance",
-                    desc: "Application d'analyse et de conversion de devises en temps réel via l'intégration d'APIs financières et historiques."
-                },
-                en: {
-                    title: "Currency Management & Rates",
-                    client: "Freelance Project",
-                    desc: "Real-time currency exchange conversion and analytics web tool integrated with financial market APIs."
-                },
-                de: {
-                    title: "Währungs- & Kursverwaltung",
-                    client: "Freelance-Projekt",
-                    desc: "Echtzeit-Währungsumrechnung und Finanzanalyse-Webtool mit Anbindung an Finanzmarkt-APIs."
-                }
-            },
-            {
-                id: 5,
-                category: "webapp",
-                tags: ["PHP", "POO", "MySQL", "UML", "Bootstrap"],
-                img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-                year: "2022",
-                fr: {
-                    title: "Gestion d'Institut d'Enseignement",
-                    client: "ISTA Nador | Projet Étudiant",
-                    desc: "Plateforme académique de gestion des étudiants, des cours, des absences et des notes avec rôles d'administration distincts."
-                },
-                en: {
-                    title: "Institute Management System",
-                    client: "ISTA Nador | Academic Project",
-                    desc: "Academic platform for managing students, courses, attendance, and grades with multi-role admin controls."
-                },
-                de: {
-                    title: "Institutsverwaltungssystem",
-                    client: "ISTA Nador | Akademisches Projekt",
-                    desc: "Akademische Plattform zur Verwaltung von Studenten, Kursen, Anwesenheiten und Noten mit Admin-Rollen."
-                }
-            },
-            {
-                id: 6,
-                category: "freelance",
-                tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-                img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
-                year: "2022",
-                fr: {
-                    title: "Application Salle de Sport",
-                    client: "Association El Qods, Zegangane | Freelance",
-                    desc: "Logiciel web de gestion des abonnements de la salle de sport, suivi des membres et contrôle des accès."
-                },
-                en: {
-                    title: "Gym Management Application",
-                    client: "El Qods Association, Zegangane | Freelance",
-                    desc: "Web application for gym memberships, member tracking, and entry access control."
-                },
-                de: {
-                    title: "Fitnessstudio-Verwaltungs-App",
-                    client: "Vereinigung El Qods, Zegangane | Freelance",
-                    desc: "Webanwendung für Fitnessstudio-Mitgliedschaften, Mitgliederverfolgung und Zugangskontrolle."
-                }
-            }
-        ];
+       const projectsData = [
+    {
+        id: 1,
+        category: "webapp",
+        tags: ["PHP", "Laravel", "MySQL", "JavaScript", "Tailwind"],
+        img: "Projets/AlBoraq.png",
+        year: "2026",
+        fr: {
+            title: "Suivi des Commandes & Employés",
+            client: "Centre d'impression 'Al Boraq', Aaroui | Freelance",
+            desc: "Application web complète de gestion des flux de travaux d'impression, attribution des tâches aux employés et suivi temps réel du statut des commandes."
+        },
+        en: {
+            title: "Orders & Employee Tracking App",
+            client: "Al Boraq Printing Center, Aaroui | Freelance",
+            desc: "Comprehensive web app for printing workflow management, employee task assignment, and real-time order status tracking."
+        },
+        de: {
+            title: "Auftrags- & Mitarbeiterverfolgung",
+            client: "Druckzentrum 'Al Boraq', Aaroui | Freelance",
+            desc: "Umfassende Webanwendung zur Verwaltung von Druckarbeitsabläufen, Aufgabenvergabe an Mitarbeiter und Auftragsverfolgung in Echtzeit."
+        }
+    },
+    {
+        id: 2,
+        category: "webapp",
+        tags: ["PHP", "CodeIgniter", "MySQL", "Bootstrap", "JS"],
+        img: "Projets/Bibliotheque.png",
+        year: "2025",
+        fr: {
+            title: "Gestion de Bibliothèque & Ventes",
+            client: "Gestion Biblio | Freelance",
+            desc: "Système de gestion de stock, suivi des ventes quotidiennes, gestion des charges et rapports financiers."
+        },
+        en: {
+            title: "Library & Sales Management",
+            client: "Gestion Biblio | Freelance",
+            desc: "Inventory management system, daily sales tracking, expense tracking, and financial analytics."
+        },
+        de: {
+            title: "Bibliotheks- & Verkaufsverwaltung",
+            client: "Gestion Biblio | Freelance",
+            desc: "Bestandsverwaltungssystem, tägliche Verkaufsverfolgung, Ausgabenverwaltung und Finanzberichte."
+        }
+    },
+    {
+        id: 3,
+        category: "webapp",
+        tags: ["PHP", "Laravel", "MySQL", "Chart.js", "Bootstrap"],
+        img: "Projets/CMC.png",
+        year: "2023",
+        fr: {
+            title: "Gestion & Suivi Académique",
+            client: "CMC Nador | Projet Académique",
+            desc: "Plateforme de suivi des stagiaires et formateurs, gestion des emplois du temps, suivi des absences et taux d'avancement des modules."
+        },
+        en: {
+            title: "Academic Management & Tracking",
+            client: "CMC Nador | Academic Project",
+            desc: "Platform for tracking trainees and instructors, timetable management, attendance tracking, and module progress rates."
+        },
+        de: {
+            title: "Akademische Verwaltung & Verfolgung",
+            client: "CMC Nador | Akademisches Projekt",
+            desc: "Plattform zur Verfolgung von Auszubildenden und Ausbildern, Stundenplanverwaltung, Anwesenheitskontrolle und Modulfortschritt."
+        }
+    },
+    {
+        id: 4,
+        category: "webapp",
+        tags: ["PHP", "POO", "MySQL", "UML", "Bootstrap"],
+        img: "Projets/ISTA.png",
+        year: "2022",
+        fr: {
+            title: "Gestion d'Institut d'Enseignement",
+            client: "ISTA Nador | Projet Étudiant",
+            desc: "Plateforme académique de gestion des étudiants, des cours, des absences et des notes avec rôles d'administration distincts."
+        },
+        en: {
+            title: "Institute Management System",
+            client: "ISTA Nador | Academic Project",
+            desc: "Academic platform for managing students, courses, attendance, and grades with multi-role admin controls."
+        },
+        de: {
+            title: "Institutsverwaltungssystem",
+            client: "ISTA Nador | Akademisches Projekt",
+            desc: "Akademische Plattform zur Verwaltung von Studenten, Kursen, Anwesenheiten und Noten mit Admin-Rollen."
+        }
+    },
+    {
+        id: 5,
+        category: "webapp",
+        tags: ["PHP", "Laravel", "MySQL", "Tailwind CSS", "JS"],
+        img: "Projets/EduCantre.png",
+        year: "2026",
+        fr: {
+            title: "Gestion de Centre de Formation",
+            client: "EduCentre | Freelance",
+            desc: "Plateforme complète pour la gestion des étudiants, suivi des paiements, alertes d'échéances et génération automatique d'attestations et certificats PDF."
+        },
+        en: {
+            title: "Training Center Management System",
+            client: "EduCentre | Freelance",
+            desc: "Comprehensive platform for student management, payment tracking, overdue alerts, and automated PDF certificate generation."
+        },
+        de: {
+            title: "Schulungszentrum-Verwaltungssystem",
+            client: "EduCentre | Freelance",
+            desc: "Umfassende Plattform für Studentenverwaltung, Zahlungsverfolgung, Überfälligkeitswarnungen und automatische PDF-Zertifikatserstellung."
+        }
+    },
+    {
+        id: 6,
+        category: "webapp",
+        tags: ["PHP", "MySQL", "APIs", "JavaScript", "HTML/CSS"],
+        img: "Projets/Exchange.png",
+        year: "2023",
+        fr: {
+            title: "Gestion des Devises & Taux",
+            client: "Projet Freelance",
+            desc: "Application d'analyse et de conversion de devises en temps réel via l'intégration d'APIs financières et historiques."
+        },
+        en: {
+            title: "Currency Management & Rates",
+            client: "Freelance Project",
+            desc: "Real-time currency exchange conversion and analytics web tool integrated with financial market APIs."
+        },
+        de: {
+            title: "Währungs- & Kursverwaltung",
+            client: "Freelance-Projekt",
+            desc: "Echtzeit-Währungsumrechnung und Finanzanalyse-Webtool mit Anbindung an Finanzmarkt-APIs."
+        }
+    },
+    {
+        id: 7,
+        category: "webapp",
+        tags: ["PHP", "Laravel", "MySQL", "Chart.js", "Bootstrap"],
+        img: "Projets/GestionReparationsVoiture.png",
+        year: "2026",
+        fr: {
+            title: "Gestion de Réparation Automobile",
+            client: "Gestion Réparation | Freelance",
+            desc: "Système de suivi des véhicules en atelier, gestion de la main d'œuvre, stock de pièces de rechange, devis et facturation."
+        },
+        en: {
+            title: "Auto Repair Shop Management",
+            client: "Gestion Réparation | Freelance",
+            desc: "Vehicle workshop tracking system, labor management, spare parts inventory, quotes, and invoicing."
+        },
+        de: {
+            title: "KFZ-Werkstattverwaltung",
+            client: "Gestion Réparation | Freelance",
+            desc: "System zur Verfolgung von Werkstattfahrzeugen, Arbeitszeitverwaltung, Ersatzteilbestand, Angebote und Rechnungsstellung."
+        }
+    },
+    {
+        id: 8,
+        category: "webapp",
+        tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        img: "Projets/GYM.png",
+        year: "2022",
+        fr: {
+            title: "Application Salle de Sport",
+            client: "Association El Qods, Zegangane | Freelance",
+            desc: "Logiciel web de gestion des abonnements de la salle de sport, suivi des membres et contrôle des accès."
+        },
+        en: {
+            title: "Gym Management Application",
+            client: "El Qods Association, Zegangane | Freelance",
+            desc: "Web application for gym memberships, member tracking, and entry access control."
+        },
+        de: {
+            title: "Fitnessstudio-Verwaltungs-App",
+            client: "Vereinigung El Qods, Zegangane | Freelance",
+            desc: "Webanwendung für Fitnessstudio-Mitgliedschaften, Mitgliederverfolgung und Zugangskontrolle."
+        }
+    },
+    {
+        id: 9,
+        category: "webapp",
+        tags: ["PHP", "Laravel", "MySQL", "JavaScript", "Tailwind CSS"],
+        img: "Projets/ReeinaCar.jpeg",
+        year: "2026",
+        fr: {
+            title: "Gestion de Location de Voitures",
+            client: "ReeinaCar Fleet Management | Freelance",
+            desc: "Solution intégrée de gestion de flotte automobile, contrats de location, réservations, état des véhicules et suivi du chiffre d'affaires."
+        },
+        en: {
+            title: "Car Rental Fleet Management",
+            client: "ReeinaCar Fleet Management | Freelance",
+            desc: "Integrated fleet management solution for rental contracts, bookings, vehicle statuses, and revenue analytics."
+        },
+        de: {
+            title: "Autovermietungs-Flottenverwaltung",
+            client: "ReeinaCar Fleet Management | Freelance",
+            desc: "Integrierte Flottenmanagement-Lösung für Mietverträge, Buchungen, Fahrzeugstatus und Umsatzanalysen."
+        }
+    },
+    {
+        id: 10,
+        category: "webapp",
+        tags: ["PHP", "Laravel", "MySQL", "JavaScript", "Tailwind CSS"],
+        img: "Projets/Transport.png",
+        year: "2026",
+        fr: {
+            title: "Plateforme Logistique & Transport de Colis",
+            client: "CODEX | Freelance",
+            desc: "Application multi-agences de gestion d'envoi et réception de colis, attribution des trajets aux chauffeurs et impression d'étiquettes/tickets."
+        },
+        en: {
+            title: "Logistics & Parcel Transport Platform",
+            client: "CODEX | Freelance",
+            desc: "Multi-branch application for parcel shipping and receiving, driver route assignment, and ticket/label printing."
+        },
+        de: {
+            title: "Logistik- & Pakettransportplattform",
+            client: "CODEX | Freelance",
+            desc: "Mehrzweck-Anwendung für Paketversand und -empfang, Zuweisung von Fahrerrouten und Druck von Etiketten/Tickets."
+        }
+    },
+    {
+        id: 11,
+        category: "webapp",
+        tags: ["PHP", "CodeIgniter", "MySQL", "Bootstrap", "JS"],
+        img: "Projets/WorldGamesJaadar.jpeg",
+        year: "2024",
+        fr: {
+            title: "Plateforme de Gaming & Événements",
+            client: "World Games Jaadar | Freelance",
+            desc: "Plateforme web d'organisation de tournois e-sport, suivi des scores, gestion des participants et classements."
+        },
+        en: {
+            title: "Gaming & Events Platform",
+            client: "World Games Jaadar | Freelance",
+            desc: "Web platform for organizing esports tournaments, score tracking, participant management, and leaderboards."
+        },
+        de: {
+            title: "Gaming- & Event-Plattform",
+            client: "World Games Jaadar | Freelance",
+            desc: "Webplattform zur Organisation von E-Sport-Turnieren, Punktestand-Verfolgung, Teilnehmerverwaltung und Ranglisten."
+        }
+    }
+];
 
         let currentLang = 'fr';
         let activeFilter = 'all';
